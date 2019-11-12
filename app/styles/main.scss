@@ -1,0 +1,187 @@
+body {
+  color: #353535å;
+}
+
+/******************************************
+* VARIABLES
+*******************************************/
+
+$spacing-unit: 80px;
+
+$tpc-sans-serif: "Avenir", Helvetica, Arial, sans-serif;
+
+
+body {
+  font-family: $tpc-sans-serif;
+}
+
+
+
+/******************************************
+* HEADER
+*******************************************/
+
+
+/*THINGS TO CHANGE ONCE JS MAKES THE SHARE BUTTONS WORK*/
+.title {
+  height: 83px;
+}
+
+.headerimage {
+  top: 70px;
+}
+/*END - THINGS TO CHANGE ONCE JS MAKES THE SHARE BUTTONS WORK*/
+
+#header-pinned {
+    font: 16px Lato;
+    color: #333;
+    font-weight: 400;
+    /* margin-right: 100px; */
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 2px solid #eee;
+    z-index: 999;
+    -webkit-transition: top 0.25s linear;
+    -moz-transition: top 0.25s linear;
+    -o-transition: top 0.25s linear;
+    transition: top 0.25s linear;
+}
+
+#header-pinned .site-logo {
+    display: block;
+    width: 274px;
+    height: 72px;
+    position: absolute;
+    left: 10px;
+    margin-top: 7px;
+    background: url(https://placekitten.com/274/72) no-repeat;
+    background-size: 274px 72px;
+}
+
+#header-pinned .title {
+font-size: 20px;
+    margin-left: 80px;
+    font-size: 14px;
+    line-height: 49px;
+    margin: 0 65px 0 55px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#header-pinned .title a {
+    display: inline;
+}
+
+.headerimage {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 430px;
+    z-index: -1;
+}
+
+#heroimage {
+  background-image: url(https://placekitten.com/1310/430);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-bottom: 170px;
+  width: 100%;
+}
+
+.title-content {
+  text-align: center;
+  margin-bottom: $spacing-unit;
+}
+
+.intro {
+ margin-bottom: $spacing-unit;
+}
+
+/* page layout */
+
+#main-container {
+
+}
+
+#form-illo {
+  border: 1px solid #D2D2D2;
+  float: left;
+  width: 48%;
+
+}
+
+#grouped-tax-fields-accordion {
+  width: 48%;
+  float: right;
+}
+
+/******************************************
+* ACCORDION STYLES
+*******************************************/
+
+.btn-link {
+  font-size: 18px;
+  font-weight: 900;
+  color: #000000;
+  text-decoration: none; 
+}
+
+.card-header {
+    border-radius: 0;
+}
+
+.card {
+  border-radius: 0;
+}
+
+.card-header {
+  background-color: #FFFFFF;
+}
+
+
+
+
+
+/******************************************
+* SVG
+*******************************************/
+
+.selected {
+  fill: blue;
+}
+
+.main-form rect {
+  fill:#174A7C;
+}
+
+.active {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.6;
+}
+
+.st0{fill:#EFEFEF;}
+
+.st2{fill:#FFFFFF;}
+.st3{font-family:'AvenirLTPro-Roman';}
+.st4{font-size:14px;}
+.st5{font-family:'AvenirLTPro-Black';}
+.st6{fill:#B0D0DB;}
+.st7{fill:#353535;}
+.st8{fill:#008BB0;}
+.st9{font-size:16px;}
+.st10{font-size:24px;}
+.st11{fill:#75ADC0;}
+
+
+/* TPC styles */
+
+
+
