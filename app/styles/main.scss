@@ -1,20 +1,38 @@
 body {
-  color: #353535å;
+  color: #353535;
 }
 
 /******************************************
 * VARIABLES
 *******************************************/
 
-$spacing-unit: 80px;
+$spacing-unit: 60px;
 
 $tpc-sans-serif: "Avenir", Helvetica, Arial, sans-serif;
 
+/******************************************
+* PAGE LAYOUT
+*******************************************/
 
 body {
   font-family: $tpc-sans-serif;
 }
 
+#main-container {
+
+}
+
+#form-illo {
+  border: 1px solid #D2D2D2;
+  float: left;
+  width: 48%;
+
+}
+
+#grouped-tax-fields-accordion {
+  width: 48%;
+  float: right;
+}
 
 
 /******************************************
@@ -30,7 +48,7 @@ body {
 .headerimage {
   top: 70px;
 }
-/*END - THINGS TO CHANGE ONCE JS MAKES THE SHARE BUTTONS WORK*/
+/*END - THINGS TO CHANGE */
 
 #header-pinned {
     font: 16px Lato;
@@ -62,35 +80,26 @@ body {
 }
 
 #header-pinned .title {
-font-size: 20px;
-    margin-left: 80px;
-    font-size: 14px;
-    line-height: 49px;
-    margin: 0 65px 0 55px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+  font-size: 20px;
+  margin-left: 80px;
+  font-size: 14px;
+  line-height: 49px;
+  margin: 0 65px 0 55px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #header-pinned .title a {
-    display: inline;
+  display: inline;
 }
 
 .headerimage {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 430px;
-    z-index: -1;
-}
-
-#heroimage {
-  background-image: url(https://placekitten.com/1310/430);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  margin-bottom: 170px;
+  position: relative;
+  overflow: hidden;
   width: 100%;
+  height: 430px;
+  z-index: -1;
 }
 
 .title-content {
@@ -98,31 +107,27 @@ font-size: 20px;
   margin-bottom: $spacing-unit;
 }
 
-.intro {
+#intro {
  margin-bottom: $spacing-unit;
 }
 
-/* page layout */
-
-#main-container {
-
-}
-
-#form-illo {
-  border: 1px solid #D2D2D2;
-  float: left;
-  width: 48%;
-
-}
-
-#grouped-tax-fields-accordion {
-  width: 48%;
-  float: right;
-}
 
 /******************************************
 * ACCORDION STYLES
 *******************************************/
+
+div.card-header.active-click {
+  background-color: #EFEFEF;
+}
+
+div.card-header.active-hover {
+  background-color: #F9F9F9;
+}
+
+.accordion img {
+  margin-bottom: 1rem;
+  width: 100%;
+}
 
 .btn-link {
   font-size: 18px;
@@ -131,54 +136,115 @@ font-size: 20px;
   text-decoration: none; 
 }
 
-.card-header {
-    border-radius: 0;
-}
-
 .card {
   border-radius: 0;
 }
 
 .card-header {
   background-color: #FFFFFF;
+  border-radius: 0;
 }
 
-
-
+.form-reference {
+  color: #8E8E8E;
+  font-size: 14px;
+  font-style: italic;
+}
 
 
 /******************************************
 * SVG
 *******************************************/
 
-.selected {
-  fill: blue;
-}
-
-.main-form rect {
-  fill:#174A7C;
-}
-
-.active {
-  opacity: 1;
-}
-
-.inactive {
+#form-illo rect {
   opacity: 0.6;
 }
 
-.st0{fill:#EFEFEF;}
+#form-illo rect.background-box {
+  opacity: 1;
+}
 
-.st2{fill:#FFFFFF;}
-.st3{font-family:'AvenirLTPro-Roman';}
-.st4{font-size:14px;}
-.st5{font-family:'AvenirLTPro-Black';}
-.st6{fill:#B0D0DB;}
+#form-illo text {
+  display: none;
+}
+
+#form-illo #background text {
+  display: block;
+}
+
+#form-illo rect {
+  &.active-click {
+    opacity: 1;
+  }
+
+  &.active-hover {
+    opacity: 0.9;
+  }
+
+  &.active-click.active-hover {
+    opacity: 1;
+  }
+}
+
+#form-illo text {
+  &.active-click {
+    display: block;
+  }
+
+  &.active-hover {
+    display: block;
+  }
+
+}
+
+
+/* Illustrator-assigned styles. Some names changed, remaining 'st' classes are for text (?) */
+
+.background-box {
+  fill:#EFEFEF;
+}
+
+.form-1040-box {
+  fill:#174A7C;
+}
+
+.sched-3-box {
+  fill: #75ADC0;
+}
+
+.sched-1-box {
+  fill: #008BB0;
+}
+
+.sched-C-box {
+  fill: #3F4F56;
+}
+
+.sched-E-box {
+  fill: #BCBEC0;
+}
+
+.sched-A-box {
+  fill: #B0D0DB;
+}
+
+
+.st3{fill:#FFFFFF;}
+
+.st4{font-family:'AvenirLTPro-Black';}
+
+.st5{font-size:14px;}
+
+.st6{font-family:'AvenirLTPro-Roman';}
+
 .st7{fill:#353535;}
-.st8{fill:#008BB0;}
-.st9{font-size:16px;}
-.st10{font-size:24px;}
-.st11{fill:#75ADC0;}
+
+.st8{font-size:16px;}
+
+.st9{font-size:24px;}
+
+.st10{fill:#164B7C;}
+
 
 
 /* TPC styles */
