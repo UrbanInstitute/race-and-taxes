@@ -1,5 +1,9 @@
 
-//TODO - adjust height of the page when you swtich categories. Must need to add height for hte header to the jQuery whatever it does
+//TODO 
+//- improve: adjust height of the page when you swtich categories
+// print styles
+// place share stuff on each card :(
+// a little arrow on the drawers
 
 var spacingUnit = 60;
 
@@ -28,19 +32,19 @@ function hiliteForm(sectionID, newClass){
 }
 
 $(".card-header").mouseenter(function(){
-  var formCat = "#" + this.getAttribute("data-cat");
+  var formCat = "#" + this.getAttribute("data-box");
   hiliteForm(formCat, "active-hover");
   $(this).addClass("active-hover")
 })
 
 $(".card-header").mouseleave(function(){
-  var formCat = "#" + this.getAttribute("data-cat");
+  var formCat = "#" + this.getAttribute("data-box");
   hiliteForm(formCat, "active-hover");
   $(this).removeClass("active-hover");
 })
 
 $(".btn-link").on("click", function(){
-  var formCat = this.getAttribute("data-target").replace("-section", ""),
+  var formCat = this.getAttribute("data-target").replace("-section", "-boxes"),
       selectedRects = formCat + " > g > rect",
       selectedText = formCat + " > g > text",
       drawerOpen = $(this.parentElement.parentElement.parentElement.parentElement.lastElementChild).hasClass("show"); 
@@ -58,6 +62,16 @@ $(".btn-link").on("click", function(){
   }
 
 })
+
+
+
+function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.style.display == 'inline-block')
+        e.style.display = 'none';
+    else
+        e.style.display = 'inline-block';
+}
 
 
 

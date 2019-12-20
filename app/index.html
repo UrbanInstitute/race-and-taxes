@@ -23,38 +23,32 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div id="header-pinned" class="no-touch">
-       <a target="_blank" href="http://www.urban.org" title="Home" rel="home" class="site-logo"></a>
-        <div class="title">
+      <!-- START HEADER -->
+  <div id="header-pinned" class="no-touch">
+    <a target="_blank" href="https://www.taxpolicycenter.org/" title="Home" rel="home" class="site-logo"></a>
+    <div class="title">
+      <span class="feature-link"><a href="https://www.taxpolicycenter.org/features" target = "_blank" class="title-linkback" alt="Urban Institute logo">Features</a></span>
+    </div>
+    <div class="share-icons">
+      <div class="shareThisP">
+        <span onclick="toggle_visibility('shareBox');">
+          <div class="shareThisB"></div>
+        </span>
 
-          <!-- <div class = "customShareLink">Share this view</div> -->
-        </div>
+        <div class="shareThisW" id="shareBox">
+          <div class="addthis_toolbox addthis_default_style  "addthis:title="" addthis:url="">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//tpc.io/tcja" target="_blank" class="addthis_button_facebook at300b" title="Facebook" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-facebook" style="background-color: rgb(48, 88, 145);"><span class="at_a11y">Share on facebook</span></span></a>
 
-        <div class = "customShareBox">
-<!--           <input type="text" id="shareURL" name="shareURL" readonly> <div id = "copyUrlButton">Copy</div>
-          <div id = "copyUrlNote">Copied to clipboard</div> -->
-        </div>
+            <a href="Twitter: " target="_blank" class="addthis_button_twitter at300b" title="Tweet" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-twitter" style="background-color: rgb(44, 168, 210);"><span class="at_a11y">Share on twitter</span></span></a>
 
-        <div class="share-icons">
-            <div class="shareThisP">
-                <span onclick="toggle_visibility('shareBox');">
-                        <div class="shareThisB"></div>
-                    </span>
-                <div class="shareThisW" id="shareBox">
-
-    <!--                 <div class="addthis_toolbox addthis_default_style  "addthis:title="" addthis:url="">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//urbn.is/2020census" target="_blank" class="addthis_button_facebook at300b" title="Facebook" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-facebook" style="background-color: rgb(48, 88, 145);"><span class="at_a11y">Share on facebook</span></span></a>
-
-                        <a href="https://twitter.com/intent/tweet?text=%232020Census%3A%20Who%27s%20at%20risk%20of%20being%20miscounted%3F%20(via%20%40urbaninstitute)%20https%3A%2F%2Furbn.is%2F2020census" target="_blank" class="addthis_button_twitter at300b" title="Tweet" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-twitter" style="background-color: rgb(44, 168, 210);"><span class="at_a11y">Share on twitter</span></span></a>
-
-                        <a href="mailto:%20?Subject=New feature from the Urban Institute &amp;Body=Hi! I thought you'd be interested in this new feature from the Urban Institute: “2020 Census: Who’s At Risk of Being Miscounted?” https://urbn.is/2020census" target="_blank" title="Email" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-email addthis_button_email" ><span class="at_a11y">Share on email</span></span></a>
-                        <div class="atclear"></div>
-                    </div> -->
-
-                </div>
-            </div>
+            <a href="mailto:%20?Subject=New interactive from the Tax Policy Center &amp;Body=Hi! I thought you'd be interested in this new interactive from the Tax Policy Center: “Is The Tax Code Neutral on Race?” LINK TK" target="_blank" class="addthis_button_email at300b" target="_blank" title="Email" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-email" style="background-color: rgb(115, 138, 141);"><span class="at_a11y">Share on email</span></span></a>
+            <div class="atclear"></div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- END HEADER -->
 
 
     <div class="container">
@@ -151,19 +145,19 @@
             <text transform="matrix(1 0 0 1 164.5 2146.5)" class="st7 st6 st8">Profit or Loss from Business</text>
             <text transform="matrix(1 0 0 1 24.5 2147.74)" class="st7 st4 st9">Schedule C</text>
           </g>
-          <g id="marital-status">
+          <g id="marital-status-boxes">
             <g>
               <rect x="71.5" y="59.5" class="form-1040-box" width="436" height="45"/>
               <text transform="matrix(1 0 0 1 80.5 85.1841)" class="st3 st4 st5">Filing Status</text>
             </g>
           </g>
-          <g id="taxpayer-identification">
+          <g id="taxpayer-identification-boxes">
             <g>
               <rect x="347.5" y="112.5" class="st10" width="160" height="26"/>
               <text transform="matrix(1 0 0 1 353.5 131.1841)" class="st3 st4 st5">Social security number</text>
             </g>
           </g>
-          <g id="age">
+          <g id="age-boxes">
             <g>
               <rect x="71.5" y="178.5" class="form-1040-box" width="436" height="45"/>
               <text transform="matrix(1 0 0 1 80.807 195.896)" class="st3 st4 st5">Standard Deduction</text>
@@ -171,7 +165,7 @@
               <text transform="matrix(1 0 0 1 226.691 212.4718)" class="st3 st6 st5">Were born before January 2, 1955</text>
             </g>
           </g>
-          <g id="income">
+          <g id="income-boxes">
             <g>
               <rect x="71.5" y="565.5" class="form-1040-box" width="436" height="24"/>
               <text transform="matrix(1 0 0 1 81.5 582.184)" class="st3 st4 st5">Line 7b.</text>
@@ -183,14 +177,14 @@
               <text transform="matrix(1 0 0 1 138.5 646.184)" class="st3 st6 st5">Adjusted gross income</text>
             </g>
           </g>
-          <g id="salary-and-wages">
+          <g id="salary-and-wages-boxes">
             <g>
               <rect x="71.5" y="309.5" class="form-1040-box" width="436" height="24"/>
               <text transform="matrix(1 0 0 1 81.5 326.184)" class="st3 st4 st5">Line 1.</text>
               <text transform="matrix(1 0 0 1 130.543 326.184)" class="st3 st6 st5">Wages, salaries, tips, etc.</text>
             </g>
           </g>
-          <g id="capital-gains-and-dividends">
+          <g id="capital-gains-and-dividends-boxes">
             <g>
               <rect x="71.5" y="373.5" class="form-1040-box" width="212" height="24"/>
               <text transform="matrix(1 0 0 1 80.5 390.184)" class="st3 st4 st5">Line 3a.</text>
@@ -212,14 +206,14 @@
               <text transform="matrix(1 0 0 1 128.5 518.1841)" class="st3 st6 st5">Capital gain (or loss)</text>
             </g>
           </g>
-          <g id="social-security-benefits">
+          <g id="social-security-benefits-boxes">
             <g>
               <rect x="71.5" y="469.5" class="form-1040-box" width="212" height="24"/>
               <text transform="matrix(1 0 0 1 80.5 486.1841)" class="st3 st4 st5">Line 5a.</text>
               <text transform="matrix(1 0 0 1 136.5 486.1841)" class="st3 st6 st5">Social security benefits</text>
             </g>
           </g>
-          <g id="retirement-savings">
+          <g id="retirement-savings-boxes">
             <g>
               <rect x="71.5" y="405.5" class="form-1040-box" width="212" height="24"/>
               <text transform="matrix(1 0 0 1 80.5 422.1841)" class="st3 st4 st5">Line 4a. </text>
@@ -236,7 +230,7 @@
               <text transform="matrix(1 0 0 1 80.5 1647.1801)" class="st7 st6 st5">Retirement savings contributions credit</text>
             </g>
           </g>
-          <g id="children-and-dependents">
+          <g id="children-and-dependents-boxes">
             <g>
               <rect x="71.5" y="917.5" class="form-1040-box" width="298" height="24"/>
               <text transform="matrix(1 0 0 1 80.5 934.1801)" class="st3 st4 st5">Line 18b.</text>
@@ -253,14 +247,14 @@
               <text transform="matrix(1 0 0 1 80.5 1583.1801)" class="st7 st6 st5">Credit for child and dependent care expenses</text>
             </g>
           </g>
-          <g id="work-incentives">
+          <g id="work-incentives-boxes">
             <g>
               <rect x="71.5" y="885.5" class="form-1040-box" width="298" height="24"/>
               <text transform="matrix(1 0 0 1 80.5 902.18)" class="st3 st4 st5">Line 18a.</text>
               <text transform="matrix(1 0 0 1 144.5 902.18)" class="st3 st6 st5">Earned income credit (EIC)</text>
             </g>
           </g>
-          <g id="pass-through-business">
+          <g id="pass-through-business-boxes">
             <g>
               <rect x="71.5" y="693.5" class="form-1040-box" width="436" height="24"/>
               <text transform="matrix(1 0 0 1 81.5 710.184)" class="st3 st4 st5">Line 10.</text>
@@ -292,7 +286,7 @@
               <text transform="matrix(1 0 0 1 82.808 2353.1799)" class="st6 st5">Income or loss from partnerships and S corporations</text>
             </g>
           </g>
-          <g id="real-estate-and-farm-income">
+          <g id="real-estate-and-farm-income-boxes">
             <g>
               <rect x="23.5" y="1209.5" class="sched-1-box" width="380" height="24"/>
               <text transform="matrix(1 0 0 1 32.5 1226.1801)" class="st3 st4 st5">Line 6.</text>
@@ -304,7 +298,7 @@
               <text transform="matrix(1 0 0 1 82.808 2300.1799)" class="st6 st5">Income or loss from rental real estate and royalties</text>
             </g>
           </g>
-          <g id="healthcare">
+          <g id="healthcare-boxes">
             <g>
               <rect x="23.5" y="1263.5" class="sched-1-box" width="380" height="24"/>
               <text transform="matrix(1 0 0 1 32.5 1280.1801)" class="st3 st4 st5">Line 12.</text>
@@ -326,7 +320,7 @@
               <text transform="matrix(1 0 0 1 128.598 1809.1801)" class="st7 st6 st5">Medical and dental expenses</text>
             </g>
           </g>
-          <g id="higher-education">
+          <g id="higher-education-boxes">
             <g>
               <rect x="71.5" y="949.5" class="form-1040-box" width="298" height="24"/>
               <text transform="matrix(1 0 0 1 80.5 966.1801)" class="st3 st4 st5">Line 18c.</text>
@@ -338,14 +332,14 @@
               <text transform="matrix(1 0 0 1 80.5 1615.1801)" class="st7 st6 st5">Education credits</text>
             </g>
           </g>
-          <g id="student-loan-debt">
+          <g id="student-loan-debt-boxes">
             <g>
               <rect x="23.5" y="1455.5" class="sched-1-box" width="380" height="24"/>
               <text transform="matrix(1 0 0 1 32.5 1472.1801)" class="st3 st4 st5">Line 20.</text>
               <text transform="matrix(1 0 0 1 88.5 1472.1801)" class="st3 st6 st5">Student loan interest deduction</text>
             </g>
           </g>
-          <g id="standard-and-itemized-deductions">
+          <g id="standard-and-itemized-deductions-boxes">
             <g>
               <rect x="71.5" y="661.5" class="form-1040-box" width="436" height="24"/>
               <text transform="matrix(1 0 0 1 81.5 678.184)" class="st3 st4 st5">Line 9.</text>
@@ -356,14 +350,14 @@
               <text transform="matrix(1 0 0 1 80.5 2089.6577)" class="st7 st4 st5">Total Itemized Deductions</text>
             </g>
           </g>
-          <g id="state-and-local-taxes">
+          <g id="state-and-local-taxes-boxes">
             <g>
               <rect x="71.5" y="1836.5" class="sched-A-box" width="332" height="24"/>
               <text transform="matrix(1 0 0 1 81.5 1853.1801)" class="st7 st4 st5">Line 5.</text>
               <text transform="matrix(1 0 0 1 129.5 1853.1801)" class="st7 st6 st5">State and local taxes</text>
             </g>
           </g>
-          <g id="housing-and-homeownership">
+          <g id="housing-and-homeownership-boxes">
             <g>
               <rect x="71.5" y="1900.5" class="sched-A-box" width="332" height="24"/>
               <text transform="matrix(1 0 0 1 81.5 1917.1801)" class="st7 st4 st5">Line 5b.</text>
@@ -375,13 +369,13 @@
               <text transform="matrix(1 0 0 1 128.598 1991.2283)" class="st7 st6 st5">Home mortgage interest and points</text>
             </g>
           </g>
-          <g id="charitable-giving">
+          <g id="charitable-giving-boxes">
             <g>
               <rect x="71.5" y="2017.5" class="sched-A-box" width="333" height="45"/>
               <text transform="matrix(1 0 0 1 80.5 2043.1799)" class="st7 st4 st5">Gifts to Charity</text>
             </g>
           </g>
-          <g id="tax-burden">
+          <g id="tax-burden-boxes">
             <g>
               <rect x="71.5" y="1013.5" class="form-1040-box" width="436" height="45"/>
               <text transform="matrix(1 0 0 1 80.5 1039.1801)" class="st3 st4 st5">Amount You Owe</text>
@@ -397,7 +391,7 @@
         
         <div class="accordion" id="grouped-tax-fields-accordion">
           <div class="card">
-            <div class="card-header" id="marital-status-info" data-cat="marital-status">
+            <div class="card-header" id="marital-status-info" data-box="marital-status-boxes">
               <a href="#marital-status"><h5 class="mb-0">
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#marital-status-section" aria-expanded="true" aria-controls="marital-status-section">
                   Filing status (marital status)
@@ -405,7 +399,7 @@
               </h5></a>
             </div>
 
-            <div id="marital-status-section" class="collapse" aria-labelledby="marital-status-info" data-cat="marital-status" data-parent="#grouped-tax-fields-accordion">
+            <div id="marital-status-section" class="collapse" aria-labelledby="marital-status-info" data-box="marital-status-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
                 <p>
                   Tax liabilities depend on a taxpayer's filing status—whether a taxpayer is married or single, and if single, whether they have children or other dependents living with them. Single taxpayers with children or other dependents are considered head of household and may qualify for taxbenefits. Under current law, most married couples filing jointly receive marriage bonuses. But some incur marriage penalties where they pay more as a married couple than they would as single taxpayers, especially dual-earner couples with similar incomes.
@@ -424,14 +418,14 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="tax-payer-identification-info" data-cat="taxpayer-identification">
+            <div class="card-header" id="tax-payer-identification-info" data-box="taxpayer-identification-boxes">
               <a href="#taxpayer-identification"><h5 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#taxpayer-identification-section" aria-expanded="false" aria-controls="taxpayer-identification-section">
                   Taxpayer identification
                 </button>
               </h5></a>
             </div>
-            <div id="taxpayer-identification-section" class="collapse" aria-labelledby="tax-payer-identification-info" data-cat="taxpayer-identification" data-parent="#grouped-tax-fields-accordion">
+            <div id="taxpayer-identification-section" class="collapse" aria-labelledby="tax-payer-identification-info" data-box="taxpayer-identification-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
                 <p>
                   A Social Security Number (SSN) is a crucial identifier for people in the United States, used to track earnings and years worked to determine eligibility for Social Security benefits, unemployment insurance, and many public assistance programs. Most taxpayers use an SSN as an identifier on their individual income tax returns. Taxpayers ineligible for SSNs, such as undocumented immigrants and certain noncitizens, generally file taxes using an <a href="https://www.irs.gov/individuals/international-taxpayers/taxpayer-identification-numbers-tin#itin">Individual Taxpayer Identification Number (ITIN)</a> issued by the IRS. Applying for or renewing ITINs, however, can be <a href="https://taxpayeradvocate.irs.gov/news/nta-blog-ITIN-Improvements">particularly challenging</a>.
@@ -450,14 +444,14 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="age-info" data-cat="age">
+            <div class="card-header" id="age-info" data-box="age-boxes">
               <a href="#age"><h5 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#age-section" aria-expanded="false" aria-controls="age-section">
                   Age
                 </button>
               </h5></a>
             </div>
-            <div id="age-section" class="collapse" aria-labelledby="age-info" data-cat="age" data-parent="#grouped-tax-fields-accordion">
+            <div id="age-section" class="collapse" aria-labelledby="age-info" data-box="age-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
                 <p>
                   Several federal income tax provisions are connected to a taxpayer's age. For example, taxpayers 65 years or older in 2019 have a slightly higher income threshold for filing taxes because they may increase their <a href="https://www.taxpolicycenter.org/briefing-book/what-standard-deduction">standard deduction</a> by $1,650 (for single or head of household filers). They may also claim a nonrefundable <a href="https://www.taxpolicycenter.org/fiscal-fact/credit-elderly-and-disabled-ff04152019">credit for the elderly and disabled</a>, though relatively few taxpayers do.
@@ -474,14 +468,14 @@
           </div>
 
           <div class="card">
-            <div class="card-header" id="income-info" data-cat="income">
+            <div class="card-header" id="income-info" data-box="income-boxes">
               <a href="#income"><h5 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#income-section" aria-expanded="false" aria-controls="income-section">
                   Income
                 </button>
               </h5></a>
             </div>
-            <div id="income-section" class="collapse" aria-labelledby="income-info" data-cat="income" data-parent="#grouped-tax-fields-accordion">
+            <div id="income-section" class="collapse" aria-labelledby="income-info" data-box="income-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
                 <p>
                   Adjusted gross income (AGI) is the income taxpayers receive from such sources as wages or salaries and interest or dividends, minus certain expenses such as student loan interest, or educator and moving expenses. It is not a comprehensive measure of income; it excludes items that are tax exempt such as retirement income. However, the distribution of AGI from income tax returns illustrates income disparities in the US; those with over $100,000 in AGI constitute less than 20 percent of tax returns but report about 60 percent of total AGI.
@@ -497,12 +491,644 @@
             </div>
           </div>
 
+          <div class="card">
+            <div class="card-header" id="salary-and-wages-info" data-box="salary-and-wages-boxes">
+              <a href="#salary-and-wages"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#salary-and-wages-section" aria-expanded="false" aria-controls="salary-and-wages-section">
+                  Salary and wages
+                </button>
+              </h5></a>
+            </div>
+            <div id="salary-and-wages-section" class="collapse" aria-labelledby="salary-and-wages-info" data-box="salary-and-wages-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="capital-gains-and-dividends-info" data-box="capital-gains-and-dividends-boxes">
+              <a href="#capital-gains-and-dividends"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#capital-gains-and-dividends-section" aria-expanded="false" aria-controls="capital-gains-and-dividends-section">
+                  Capital gains and dividends
+                </button>
+              </h5></a>
+            </div>
+            <div id="capital-gains-and-dividends-section" class="collapse" aria-labelledby="capital-gains-and-dividends-info" data-box="capital-gains-and-dividends-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="social-security-benefits-info" data-box="social-security-benefits-boxes">
+              <a href="#social-security-benefits"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#social-security-benefits-section" aria-expanded="false" aria-controls="social-security-benefits-section">
+                  Social security and benefits
+                </button>
+              </h5></a>
+            </div>
+            <div id="social-security-benefits-section" class="collapse" aria-labelledby="social-security-benefits-info" data-box="social-security-benefits-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="retirement-savings-info" data-box="retirement-savings-boxes">
+              <a href="#retirement-savings"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#retirement-savings-section" aria-expanded="false" aria-controls="retirement-savings-section">
+                  Retirement savings
+                </button>
+              </h5></a>
+            </div>
+            <div id="retirement-savings-section" class="collapse" aria-labelledby="retirement-savings-info" data-box="retirement-savings-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="children-and-dependents-info" data-box="children-and-dependents-boxes">
+              <a href="#children-and-dependents"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#children-and-dependents-section" aria-expanded="false" aria-controls="children-and-dependents-section">
+                  Children and dependents
+                </button>
+              </h5></a>
+            </div>
+            <div id="children-and-dependents-section" class="collapse" aria-labelledby="children-and-dependents-info" data-box="children-and-dependents-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="work-incentives-info" data-box="work-incentives-boxes">
+              <a href="#work-incentives"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#work-incentives-section" aria-expanded="false" aria-controls="work-incentives-section">
+                  Work incentives
+                </button>
+              </h5></a>
+            </div>
+            <div id="work-incentives-section" class="collapse" aria-labelledby="work-incentives-info" data-box="work-incentives-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="pass-through-business-info" data-box="pass-through-business-boxes">
+              <a href="#pass-through-business"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#pass-through-business-section" aria-expanded="false" aria-controls="pass-through-business-section">
+                  Pass through business
+                </button>
+              </h5></a>
+            </div>
+            <div id="pass-through-business-section" class="collapse" aria-labelledby="pass-through-business-info" data-box="pass-through-business-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="real-estate-and-farm-income-info" data-box="real-estate-and-farm-income-boxes">
+              <a href="#real-estate-and-farm-income"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#real-estate-and-farm-income-section" aria-expanded="false" aria-controls="real-estate-and-farm-income-section">
+                  Real estate and farm income
+                </button>
+              </h5></a>
+            </div>
+            <div id="real-estate-and-farm-income-section" class="collapse" aria-labelledby="real-estate-and-farm-income-info" data-box="real-estate-and-farm-income-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="healthcare-info" data-box="healthcare-boxes">
+              <a href="#healthcare"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#healthcare-section" aria-expanded="false" aria-controls="healthcare-section">
+                  Healthcare
+                </button>
+              </h5></a>
+            </div>
+            <div id="healthcare-section" class="collapse" aria-labelledby="healthcare-info" data-box="healthcare-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-header" id="higher-education-info" data-box="higher-education-boxes">
+              <a href="#higher-education"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#higher-education-section" aria-expanded="false" aria-controls="higher-education-section">
+                  Higher education
+                </button>
+              </h5></a>
+            </div>
+            <div id="higher-education-section" class="collapse" aria-labelledby="higher-education-info" data-box="higher-education-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-header" id="student-loan-debt-info" data-box="student-loan-debt-boxes">
+              <a href="#student-loan-debt"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#student-loan-debt-section" aria-expanded="false" aria-controls="student-loan-debt-section">
+                  Student loan debt
+                </button>
+              </h5></a>
+            </div>
+            <div id="student-loan-debt-section" class="collapse" aria-labelledby="student-loan-debt-info" data-box="student-loan-debt-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="standard-and-itemized-deductions-info" data-box="standard-and-itemized-deductions-boxes">
+              <a href="#standard-and-itemized-deductions"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#standard-and-itemized-deductions-section" aria-expanded="false" aria-controls="standard-and-itemized-deductions-section">
+                  Standard and itemized deductions
+                </button>
+              </h5></a>
+            </div>
+            <div id="standard-and-itemized-deductions-section" class="collapse" aria-labelledby="standard-and-itemized-deductions-info" data-box="standard-and-itemized-deductions-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="state-and-local-taxes-info" data-box="state-and-local-taxes-boxes">
+              <a href="#state-and-local-taxes"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#state-and-local-taxes-section" aria-expanded="false" aria-controls="state-and-local-taxes-section">
+                  State and local taxes
+                </button>
+              </h5></a>
+            </div>
+            <div id="state-and-local-taxes-section" class="collapse" aria-labelledby="state-and-local-taxes-info" data-box="state-and-local-taxes-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="housing-and-homeownership-info" data-box="housing-and-homeownership-boxes">
+              <a href="#housing-and-homeownership"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#housing-and-homeownership-section" aria-expanded="false" aria-controls="housing-and-homeownership-section">
+                  Housing and home ownership
+                </button>
+              </h5></a>
+            </div>
+            <div id="housing-and-homeownership-section" class="collapse" aria-labelledby="housing-and-homeownership-info" data-box="housing-and-homeownership-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="charitable-giving-info" data-box="charitable-giving-boxes">
+              <a href="#charitable-giving"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#charitable-giving-section" aria-expanded="false" aria-controls="charitable-giving-section">
+                  Charitable giving
+                </button>
+              </h5></a>
+            </div>
+            <div id="charitable-giving-section" class="collapse" aria-labelledby="charitable-giving-info" data-box="charitable-giving-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="tax-burden-info" data-box="tax-burden-boxes">
+              <a href="#tax-burden"><h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#tax-burden-section" aria-expanded="false" aria-controls="tax-burden-section">
+                  Tax burden
+                </button>
+              </h5></a>
+            </div>
+            <div id="tax-burden-section" class="collapse" aria-labelledby="tax-burden-info" data-box="tax-burden-boxes" data-parent="#grouped-tax-fields-accordion">
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <img src="" alt="">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+              </div>
+            </div>
+          </div>
+ 
+
         </div> <!-- end accordion -->
        </div> <!--end main-container -->
+
+
+
+
 
       <div class="footer"></div>
 
     </div><!--end container -->
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
