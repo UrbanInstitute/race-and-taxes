@@ -232,24 +232,21 @@ h5 {
   display: inline;
 }
 
-.arrow-up {
-  border-bottom: 5px solid black;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
+.arrow-down {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #000000;
   float: right;
   height: 0;
   margin-top: 20px;
+  transform: rotate(0deg);
+  transition: transform 0.25s ease-out;
   width: 0;
 }
 
-.arrow-down {
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 7px solid #000000;
-    float: right;
-    height: 0;
-    margin-top: 20px;
-    width: 0;
+.rotate-arrow-to-up {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease-out;
 }
 
 .accordion img {
