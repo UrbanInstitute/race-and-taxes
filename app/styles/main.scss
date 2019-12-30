@@ -8,7 +8,7 @@ body {
 
 $spacing-unit: 60px;
 
-$tpc-sans-serif: "Avenir", Helvetica, Arial, sans-serif;
+$tpc-sans-serif: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /******************************************
 * PAGE LAYOUT
@@ -234,7 +234,7 @@ div.card-header.active-hover {
   font-size: 18px;
   font-weight: 900;
   color: #000000;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .card {
@@ -256,7 +256,6 @@ div.card-header.active-hover {
 /******************************************
 * SVG
 *******************************************/
-
 #form-illo rect {
   opacity: 0.6;
 }
@@ -333,11 +332,15 @@ div.card-header.active-hover {
 
 .st3{fill:#FFFFFF;}
 
-.st4{font-family:'AvenirLTPro-Black';}
+.st4 {
+  font-weight: 800;
+}
 
 .st5{font-size:14px;}
 
-.st6{font-family:'AvenirLTPro-Roman';}
+.st6 {
+  font-weight: 400;
+}
 
 .st7{fill:#353535;}
 
@@ -360,7 +363,7 @@ div.card-header.active-hover {
 
   #grouped-tax-fields-accordion {
     width: 100%;
-    
+
   }
 }
 
