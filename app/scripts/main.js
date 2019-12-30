@@ -2,7 +2,8 @@
 //TODO
 //DONEhover event to boxes - shows name
 //DONEclick event to boxes - opens drawer
-//add transition to the active classes
+//DONEadd transition to the active classes
+//DONEunderline .line-items on mouseover
 // print styles
 // place share stuff on each card :(
 // a little arrow on the drawers
@@ -12,13 +13,14 @@ var spacingUnit = 60;
 $(document).ready(function() {
     var section = window.location.hash,
       anchor = section + '-section',
-      divHeader = section + '-info';
+      divHeader = section + '-info',
+      box = section + '-boxes';
 
     $(anchor).collapse('toggle');
 
     //the form hilites need to match the open dropdown section
     if (window.location.hash != ''){
-      hiliteForm(section, 'active-click')
+      hiliteForm(box, 'active-click')
       $(divHeader).toggleClass('active-click')
     }
 
@@ -54,6 +56,7 @@ $('.btn-link').on('click', function(){
       selectedRects = formCat + ' > g > rect',
       selectedText = formCat + ' > g > text',
       drawerOpen = $(this.parentElement.parentElement.parentElement.parentElement.lastElementChild).hasClass('show');
+
   //close all drawers
   $('div.card-header').removeClass('active-click');
   $('text.active-click').removeClass('active-click');
@@ -69,26 +72,59 @@ $('.btn-link').on('click', function(){
   }
 })
 
-//highlight form box on mouseover
-$('g#line-items > g > g > rect').mouseenter(function(){
-  $(this).addClass('active-hover');
-  $(this).siblings().addClass('active-hover');
-})
+//highlight form box on mouseover and highlight corresponding drawer
+$('g#line-items > g > g').mouseenter(function(){
+  var box = $(this.parentElement).attr('id'),
+    cardHeader = box.replace('-boxes','-info');
 
-$('g#line-items > g > g > rect').mouseleave(function(){
-  $(this).removeClass('active-hover');
+  $(this).children().addClass('active-hover');
+
+  $('div.card-header').removeClass('active-hover');
+  $('#' + cardHeader).addClass('active-hover');
+});
+
+$('g#line-items > g > g').mouseleave(function(){
+  $(this).children().removeClass('active-hover');
   $(this).siblings().removeClass('active-hover');
-})
+  $('div.card-header').removeClass('active-hover');
+});
+
+//underline the text on mouseover
+//note: .st4 = bold text, .st6 = light text
+$('g#line-items > g > g > text').mouseenter(function() {
+  var formCat = $(this.parentElement.parentElement).attr('id');
+  $('#' + formCat + '> g > text').css('text-decoration', 'underline')
+});
+
+$('g#line-items > g > g > text').mouseleave(function() {
+  var formCat = $(this.parentElement.parentElement).attr('id');
+  $('#' + formCat + '> g > text').css('text-decoration', 'none')
+});
 
 //clicking box on form opens corresponding drawer
-$('g#line-items > g > g > rect').on('click', function(){
-  var formCat = $(this.parentElement.parentElement).attr("id"),
-      header = formCat.replace("-boxes", "-info"),
-      card = '#' + formCat.replace("-boxes", "-section");
+$('g#line-items > g > g').on('click', function(){
+  var formCat = $(this.parentElement).attr('id'),
+      header = formCat.replace('-boxes', '-info'),
+      card = '#' + formCat.replace('-boxes', '-section'),
+      url = card.replace('-section', '');
 
+  //set URL
+  window.location.assign(url);
   //handle custom changes - remove shading from all card headers, apply to just selected
   $('div.card-header').removeClass('active-click');
   $('div.card-header#' + header).addClass('active-click');
+  // if line-item is already selected
+  if ($(this).children('.active-click').length > 0){
+
+    $('#form-illo rect, #form-illo text').removeClass('active-click');
+  } else {
+    $('#form-illo rect, #form-illo text').removeClass('active-click');
+     $(this).children().addClass('active-click');
+  }
+
+
+
+
 
   //let jquery do the rest
   $(card).collapse('toggle');

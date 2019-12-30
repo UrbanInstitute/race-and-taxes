@@ -34,8 +34,6 @@ body {
   float: right;
 }
 
-
-
 /******************************************
 * HEADER
 *******************************************/
@@ -218,11 +216,40 @@ body {
 *******************************************/
 
 div.card-header.active-click {
-  background-color: #EFEFEF;
+  background-color: #EFEFEF !important;
 }
 
 div.card-header.active-hover {
   background-color: #F9F9F9;
+  transition: opacity 0.5s ease-out;
+}
+
+div.card-header {
+  position: relative;
+}
+
+h5 {
+  display: inline;
+}
+
+.arrow-up {
+  border-bottom: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  float: right;
+  height: 0;
+  margin-top: 20px;
+  width: 0;
+}
+
+.arrow-down {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #000000;
+    float: right;
+    height: 0;
+    margin-top: 20px;
+    width: 0;
 }
 
 .accordion img {
@@ -260,12 +287,15 @@ div.card-header.active-hover {
   opacity: 0.6;
 }
 
+#form-illo g#line-items {
+  cursor: pointer;
+}
+
 #form-illo rect.background-box {
   opacity: 1;
 }
 
 #form-illo text {
-  font: "Avenir LT W01_55 Roman1475520","Helvetica Neue",Helvetica,Arial,sans-serif;
   display: none;
 }
 
@@ -280,6 +310,7 @@ div.card-header.active-hover {
 
   &.active-hover {
     opacity: 0.8;
+    transition: opacity 0.5s ease-out;
   }
 
   &.active-click.active-hover {
@@ -294,6 +325,7 @@ div.card-header.active-hover {
 
   &.active-hover {
     display: block;
+    transition: opacity 0.5s ease-out;
   }
 
 }
