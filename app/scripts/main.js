@@ -84,10 +84,10 @@ function clickHilite(sectionID){
 
   //rotate any turned arrow back to original down position
   $('div.card-header > span' ).removeClass('rotate-arrow-to-up');
+  //deselect boxes on form
+  $('g#line-items > g > g').children().removeClass('active-click');
 
   if (drawerOpen){
-    //deselect boxes and text on form
-    $(lineItemG).children().children().removeClass('active-click');
     //deselect card headers
     $('div.card-header').removeClass('active-click');
   } else {
