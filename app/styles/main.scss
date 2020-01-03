@@ -26,20 +26,23 @@ body {
   max-width: 90% !important;
 }
 
-#main-container {
-
-}
-
 #form-illo {
   border: 1px solid #E2E2E2;
   float: left;
   width: 48%;
-
 }
 
 #grouped-tax-fields-accordion {
   width: 48%;
   float: right;
+}
+
+.alert {
+  border: 1px solid #5DFF6C;
+  color: #FC10E0;
+  font-weight: 700;
+  padding: 10px 40%;
+  text-transform: uppercase;
 }
 
 /******************************************
