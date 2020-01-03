@@ -8,7 +8,7 @@ body {
 
 $spacing-unit: 60px;
 
-$tpc-sans-serif: "Avenir", Helvetica, Arial, sans-serif;
+$tpc-sans-serif: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /******************************************
 * PAGE LAYOUT
@@ -37,8 +37,6 @@ body {
   width: 48%;
   float: right;
 }
-
-
 
 /******************************************
 * HEADER
@@ -222,11 +220,37 @@ body {
 *******************************************/
 
 div.card-header.active-click {
-  background-color: #EFEFEF;
+  background-color: #EFEFEF !important;
 }
 
 div.card-header.active-hover {
   background-color: #F9F9F9;
+  transition: opacity 0.5s ease-out;
+}
+
+div.card-header {
+  position: relative;
+}
+
+h5 {
+  display: inline;
+}
+
+.arrow-down {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #000000;
+  float: right;
+  height: 0;
+  margin-top: 20px;
+  transform: rotate(0deg);
+  transition: transform 0.25s ease-out;
+  width: 0;
+}
+
+.rotate-arrow-to-up {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease-out;
 }
 
 .accordion img {
@@ -238,7 +262,7 @@ div.card-header.active-hover {
   font-size: 18px;
   font-weight: 900;
   color: #000000;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .card {
@@ -260,9 +284,12 @@ div.card-header.active-hover {
 /******************************************
 * SVG
 *******************************************/
-
 #form-illo rect {
   opacity: 0.6;
+}
+
+#form-illo g#line-items {
+  cursor: pointer;
 }
 
 #form-illo rect.background-box {
@@ -270,7 +297,6 @@ div.card-header.active-hover {
 }
 
 #form-illo text {
-  font: "Avenir LT W01_55 Roman1475520","Helvetica Neue",Helvetica,Arial,sans-serif;
   display: none;
 }
 
@@ -285,6 +311,7 @@ div.card-header.active-hover {
 
   &.active-hover {
     opacity: 0.8;
+    transition: opacity 0.5s ease-out;
   }
 
   &.active-click.active-hover {
@@ -299,6 +326,7 @@ div.card-header.active-hover {
 
   &.active-hover {
     display: block;
+    transition: opacity 0.5s ease-out;
   }
 
 }
@@ -337,11 +365,15 @@ div.card-header.active-hover {
 
 .st3{fill:#FFFFFF;}
 
-.st4{font-family:'AvenirLTPro-Black';}
+.st4 {
+  font-weight: 800;
+}
 
 .st5{font-size:14px;}
 
-.st6{font-family:'AvenirLTPro-Roman';}
+.st6 {
+  font-weight: 400;
+}
 
 .st7{fill:#353535;}
 
@@ -373,7 +405,7 @@ div.card-header.active-hover {
 
   #grouped-tax-fields-accordion {
     width: 100%;
-    
+
   }
 }
 
