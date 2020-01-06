@@ -54,8 +54,10 @@ $('g#line-items > g > g').mouseenter(function(){
 });
 
 $('g#line-items > g > g').mouseleave(function(){
-  var lineItem = '#' + $(this.parentElement).attr('id').replace('-boxes', '');
+  var lineItem = '#' + $(this.parentElement).attr('id').replace('-boxes', ''),
+    cardHeader = lineItem + '-info';
   mouseoverHilite(lineItem);
+  $(cardHeader).removeClass('active-hover');
 });
 
 //underline the text on mouseover

@@ -218,7 +218,10 @@ body {
 }
 
 #intro {
- margin-bottom: $spacing-unit;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 90px;
+  width: 55%;
 }
 
 
@@ -372,13 +375,6 @@ h5 {
   opacity: 1;
 }
 
-#form-illo text {
-  display: none;
-}
-
-#form-illo #background text {
-  display: block;
-}
 
 #form-illo rect {
   &.active-click {
@@ -395,17 +391,6 @@ h5 {
   }
 }
 
-#form-illo text {
-  &.active-click {
-    display: block;
-  }
-
-  &.active-hover {
-    display: block;
-    transition: opacity 0.5s ease-out;
-  }
-
-}
 
 
 /* Illustrator-assigned styles. Some names changed, remaining 'st' classes are for text (?) */
@@ -465,15 +450,19 @@ h5 {
 
 /* mobile */
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
   
-.container {
-  max-width: 100% !important;
-}
+  .container {
+    max-width: 100% !important;
+  }
 
-.card-body {
-  padding: 1rem;
-}
+  .card-body {
+    padding: 1rem;
+  }
+
+  #intro {
+    width: 95%;
+  }
 
   #form-illo {
     display: none;
