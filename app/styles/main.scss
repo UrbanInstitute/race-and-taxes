@@ -298,6 +298,12 @@ footer h3, footer h4{
 * ACCORDION STYLES
 *******************************************/
 
+.collapsing {
+  -webkit-transition: none !important;
+  transition: none !important;
+  display: none !imporant;
+}
+
 div.card-header.active-click {
   background-color: #EFEFEF !important;
 }
@@ -327,11 +333,6 @@ h5 {
   width: 0;
 }
 
-.rotate-arrow-to-up {
-  transform: rotate(180deg);
-  transition: transform 0.25s ease-out;
-}
-
 .accordion img {
   margin-bottom: 1rem;
   width: 100%;
@@ -348,15 +349,25 @@ h5 {
   border-radius: 0;
 }
 
+.card-body p {
+  padding: 0.25rem 0.75rem;
+}
+
 .card-header {
   background-color: #FFFFFF;
   border-radius: 0;
+  /*padding: 0.25rem 0.75rem;*/
 }
 
 .form-reference {
   color: #8E8E8E;
   font-size: 14px;
   font-style: italic;
+}
+
+.rotate-arrow-to-up {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease-out;
 }
 
 

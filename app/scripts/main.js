@@ -72,13 +72,19 @@ $('g#line-items > g > g > text').mouseleave(function() {
   $('#' + formCat + '> g > text').css('text-decoration', 'none')
 });
 
+
 //*********CLICK ********//
-function clickHilite(sectionID){
+function clickHilite(sectionID, event){
+  event.preventDefault();
     var lineItemG = sectionID + '-boxes',
       cardHeader = sectionID + '-info',
       section = sectionID + '-section',
       isAnchorClick = $(event.currentTarget).hasClass('btn'),
       drawerOpen = $(section).hasClass('show'); 
+
+  if(!isAnchorClick){
+    $(sectionID + '-section').collapse('toggle');
+  }
 
   //deselect all card-headers & hilite selected
   $('div.card-header').removeClass('active-click');
@@ -97,22 +103,24 @@ function clickHilite(sectionID){
     $(cardHeader + ' > span' ).addClass('rotate-arrow-to-up');
   }
 
-  if(!isAnchorClick){
-    //set URL
-    window.location.assign(sectionID);
-    //let jQuery do the rest w the accordion
-    $(sectionID + '-section').collapse('toggle');
-  }
+  $(section).on('shown.bs.collapse', function(event){
+    
+    var navHeight = $('#header-pinned > div.title').outerHeight();
+    window.scroll({
+      top: $(cardHeader).offset().top - navHeight,
+      behavior: 'smooth'
+    })
+  })
 }
 
-$('.btn-link').on('click', function(){
+$('.btn-link').on('click', function(event){
   var formCat = this.getAttribute('data-target').replace('-section','')
-  clickHilite(formCat);
+  clickHilite(formCat, event);
 })
  
-$('g#line-items > g > g').on('click', function(){
-  var formCat = '#' + $(this.parentElement).attr('id').replace('-boxes', '');
-  clickHilite(formCat);
+$('.form-link').on('click', function(event){
+  var formCat = '#' + this.getAttribute('data-target').replace('-section', '')
+  clickHilite(formCat, event);
 });
 
 
