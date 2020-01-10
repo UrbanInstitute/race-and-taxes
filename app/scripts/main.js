@@ -4,6 +4,7 @@
 // links for both
 
 // svgs - need to use "object", I think. Change font definitions in each one.
+//create resize event and set the form-illo's height again
 
 
 
@@ -26,6 +27,12 @@ $(document).ready(function() {
 
   var headerHeight = $('#header-pinned').outerHeight();
   $('div.title-content').css('margin-top', headerHeight + spacingUnit);
+
+  //fix svg container div height for IE
+  var illoWidth = $('#form-illo > svg').width(),
+    aspectRatio = 4.534952263311797,
+    newHeight = illoWidth * aspectRatio;
+  $('#form-illo').height(newHeight);
   
   //h/t: https://stackoverflow.com/questions/49636727/why-is-scroll-behaviorsmooth-not-working-but-javascript-window-scroll-smooth-is?newreg=472532a8017f4bc59a4965f7dcf5a84b
   window.smoothScrollTo = function(endX, endY, duration) {
@@ -173,6 +180,13 @@ $(document).ready(function() {
 
   //     // close for writing
   //     popupWin.document.close();
+
+  $( window ).resize(function() {
+      var illoWidth = $('#form-illo > svg').width(),
+      aspectRatio = 4.534952263311797,
+      newHeight = illoWidth * aspectRatio;
+    $('#form-illo').height(newHeight);
+  });
 
 
 });
