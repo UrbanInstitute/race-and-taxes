@@ -2,7 +2,9 @@ body {
   color: #353535;
 }
 
-
+.calvert {
+  font-family:"Calvert MT W01 Regular";
+}
 
 /******************************************
 * VARIABLES
@@ -10,14 +12,18 @@ body {
 
 $spacing-unit: 60px;
 
-$tpc-sans-serif: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$tpc-sans-serif-roman: "Avenir LT W01_55 Roman1475520", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$tpc-sans-serif-roman-oblique: "Avenir LT W01_55 Obliqu1475526", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$tpc-sans-serif-black: "Avenir LT W01_95 Black1475556", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /******************************************
 * PAGE LAYOUT
 *******************************************/
 
 body {
-  font-family: $tpc-sans-serif;
+  font-family: $tpc-sans-serif-roman;
 }
 
 .clear {
@@ -42,7 +48,7 @@ body {
 .alert {
   border: 1px solid #5DFF6C;
   color: #FC10E0;
-  font-weight: 900;
+  font-family: $tpc-sans-serif-black;
   padding: 10px 40%;
   text-transform: uppercase;
 }
@@ -59,9 +65,8 @@ body {
     background: #FFFFFF;
     border-bottom: 2px solid #EEEEEE;
     color: #333333;
-    font: "Avenir LT W01_55 Roman1475520","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font: $tpc-sans-serif-roman;
     font-size: 16px;
-    font-weight: 400;
     height: 56px;
     left: 0;
     position: fixed;
@@ -76,7 +81,7 @@ body {
 
 #header-pinned * {
   color: #333333;
-  font-weight: 400;
+  font-family: $tpc-sans-serif-roman;
   text-decoration: none;
 }
 
@@ -260,7 +265,7 @@ h4 {
 }
 
 .credits{
-  font-style: italic;
+  font-family: $tpc-sans-serif-roman-oblique;
 }
 
 footer p {
@@ -289,7 +294,7 @@ footer h3, footer h4{
 }
 
 .urbanstatement {
-    font-style: italic;
+    font-family: $tpc-sans-serif-roman-oblique;
     color: #666666;
     font-size: 13px;
     margin-bottom: 1em;
@@ -349,7 +354,7 @@ div.card-header {
 
 .btn-link {
   font-size: 18px;
-  font-weight: 900;
+  font-family: $tpc-sans-serif-black;
   color: #000000;
   text-decoration: none;
 }
@@ -384,7 +389,7 @@ div.card-header {
 *******************************************/
 
 svg {
-  font-family: $tpc-sans-serif;
+  font-family: $tpc-sans-serif-roman;
 }
 
 #form-illo rect {
@@ -448,7 +453,7 @@ svg {
 .st3{fill:#FFFFFF;}
 
 .st4 {
-  font-weight: 900;
+  font-family: $tpc-sans-serif-black;
 }
 
 .st5{font-size:14px;}
