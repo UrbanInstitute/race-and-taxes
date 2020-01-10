@@ -2,10 +2,6 @@ body {
   color: #353535;
 }
 
-.calvert {
-  font-family:"Calvert MT W01 Regular";
-}
-
 /******************************************
 * VARIABLES
 *******************************************/
@@ -472,7 +468,12 @@ svg {
 
 
 
-/* TPC styles */
+/* IE ヽ(ಠ_ಠ)ノ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  svg {
+    width: 100%; 
+  }
+}
 
 /* mobile */
 
