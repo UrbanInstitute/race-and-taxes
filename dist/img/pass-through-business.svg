@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 450 359" style="enable-background:new 0 0 450 359;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#D9D9D9;stroke-linejoin:round;stroke-dasharray:1,1;}
+	.st1{font-family:'Avenir-Roman';}
+	.st2{font-size:10px;}
+	.st3{font-family:'Avenir-Medium';}
+	.st4{font-size:18px;}
+	.st5{font-family:'Avenir-Book';}
+	.st6{font-size:14px;}
+	.st7{letter-spacing:-1;}
+	.st8{font-size:12px;}
+	.st9{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st10{font-family:'Avenir-Black';}
+	.st11{fill:#008BB0;}
+	.st12{fill:#17497C;}
+	.st13{fill:#FFFFFF;}
+	.st14{clip-path:url(#SVGID_2_);}
+</style>
+<title>_charts2</title>
+<g id="axis">
+	<line class="st0" x1="116.5" y1="81.6" x2="116.5" y2="277.6"/>
+	<line class="st0" x1="179.1" y1="81.6" x2="179.1" y2="277.6"/>
+	<line class="st0" x1="241.7" y1="81.6" x2="241.7" y2="277.6"/>
+	<line class="st0" x1="304.3" y1="81.2" x2="304.3" y2="277.6"/>
+	<line class="st0" x1="366.9" y1="80.7" x2="366.9" y2="277.6"/>
+	<text transform="matrix(1 0 0 1 51.69 293.99)" class="st1 st2">0</text>
+	<text transform="matrix(1 0 0 1 98.4 293.99)" class="st1 st2">$10,000</text>
+	<text transform="matrix(1 0 0 1 162.4 293.99)" class="st1 st2">$20,000</text>
+	<text transform="matrix(1 0 0 1 223.4 293.99)" class="st1 st2">$30,000</text>
+	<text transform="matrix(1 0 0 1 285.4 293.99)" class="st1 st2">$40,000</text>
+	<text transform="matrix(1 0 0 1 348.4 293.99)" class="st1 st2">$50,000</text>
+	<line class="st0" x1="429.5" y1="81" x2="429.5" y2="277.6"/>
+	<text transform="matrix(1 0 0 1 410.81 294.31)" class="st1 st2">$60,000</text>
+</g>
+<g id="value">
+	<text transform="matrix(1 0 0 1 2.47 16.98)" class="st3 st4">A</text>
+	<text transform="matrix(1 0 0 1 14.82 16.98)" class="st3 st4">verage Self-Employment Net Income</text>
+	<text transform="matrix(1 0 0 1 2.47 35.28)" class="st5 st6">Fa</text>
+	<text transform="matrix(1 0 0 1 17.52 35.28)" class="st5 st6">r</text>
+	<text transform="matrix(1 0 0 1 22.42 35.28)" class="st5 st6">m and nonfa</text>
+	<text transform="matrix(1 0 0 1 101.01 35.28)" class="st5 st6">r</text>
+	<text transform="matrix(1 0 0 1 105.91 35.28)" class="st5 st6">m by race or ethnicit</text>
+	<text transform="matrix(1 0 0 1 234.22 35.28)" class="st5 st6 st7">y</text>
+	<text transform="matrix(1 0 0 1 239.68 35.28)" class="st5 st6">, 2018</text>
+	<text transform="matrix(1 0 0 1 25.47 67.99)" class="st1 st8">Nonfarm</text>
+	<text transform="matrix(1 0 0 1 120.47 67.99)" class="st1 st8">Farm</text>
+	<line class="st9" x1="54.1" y1="81.6" x2="54.1" y2="277.6"/>
+	<text transform="matrix(1 0 0 1 2.47 316.93)" class="st10 st2">Sou</text>
+	<text transform="matrix(1 0 0 1 20.05 316.93)" class="st10 st2">r</text>
+	<text transform="matrix(1 0 0 1 23.76 316.93)" class="st10 st2">ce:</text>
+	<text transform="matrix(1 0 0 1 37.28 316.93)" class="st5 st2"> PINC-09, Sou</text>
+	<text transform="matrix(1 0 0 1 100.32 316.93)" class="st5 st2">r</text>
+	<text transform="matrix(1 0 0 1 103.46 316.93)" class="st5 st2">ce of Income in 2018- Number with Income and Mean Income of Specified </text>
+	<text transform="matrix(1 0 0 1 2.47 328.93)" class="st5 st2 st7">T</text>
+	<text transform="matrix(1 0 0 1 7.1 328.93)" class="st5 st2">ype in 2018 of People 15 </text>
+	<text transform="matrix(1 0 0 1 121.78 328.93)" class="st5 st2">Y</text>
+	<text transform="matrix(1 0 0 1 126.6 328.93)" class="st5 st2">ears Old and Ove</text>
+	<text transform="matrix(1 0 0 1 205.7 328.93)" class="st5 st2">r</text>
+	<text transform="matrix(1 0 0 1 208.1 328.93)" class="st5 st2">, f</text>
+	<text transform="matrix(1 0 0 1 216.62 328.93)" class="st5 st2">r</text>
+	<text transform="matrix(1 0 0 1 219.75 328.93)" class="st5 st2">om US Census Bu</text>
+	<text transform="matrix(1 0 0 1 299.06 328.93)" class="st5 st2">r</text>
+	<text transform="matrix(1 0 0 1 302.2 328.93)" class="st5 st2">eau, Cur</text>
+	<text transform="matrix(1 0 0 1 339.99 328.93)" class="st5 st2">r</text>
+	<text transform="matrix(1 0 0 1 343.13 328.93)" class="st5 st2">ent Population Surve</text>
+	<text transform="matrix(1 0 0 1 436.09 328.93)" class="st5 st2">y</text>
+	<text transform="matrix(1 0 0 1 439.99 328.93)" class="st5 st2">, </text>
+	<text transform="matrix(1 0 0 1 2.47 340.93)" class="st5 st2">2019 Annual Social and Economic Supplement, September 2019.</text>
+	<text transform="matrix(1 0 0 1 2.47 354.93)" class="st10 st2">Notes:</text>
+	<text transform="matrix(1 0 0 1 33.56 354.93)" class="st5 st2"> Data not p</text>
+	<text transform="matrix(1 0 0 1 83.93 354.93)" class="st5 st2">r</text>
+	<text transform="matrix(1 0 0 1 87.07 354.93)" class="st5 st2">esented for Asian Fa</text>
+	<text transform="matrix(1 0 0 1 178.57 354.93)" class="st5 st2">r</text>
+	<text transform="matrix(1 0 0 1 182.07 354.93)" class="st5 st2">m employment because of sample size constraints.</text>
+	<text transform="matrix(1 0 0 1 2.48 200.99)" class="st3 st8">Hispanic</text>
+	<text transform="matrix(1 0 0 1 19.79 249.99)" class="st3 st8">Black</text>
+	<text transform="matrix(1 0 0 1 16.27 152.99)" class="st3 st8">White</text>
+	<text transform="matrix(1 0 0 1 18.92 107.99)" class="st3 st8">Asian</text>
+	<rect x="4.4" y="59.6" class="st11" width="15" height="10"/>
+	<rect x="54.4" y="85.6" class="st11" width="337.6" height="20"/>
+	<rect x="99.4" y="59.6" class="st12" width="15" height="10"/>
+	<rect x="54.4" y="130.6" class="st11" width="239.6" height="20"/>
+	<rect x="54.4" y="150.6" class="st12" width="99.6" height="20"/>
+	<rect x="54.4" y="178.6" class="st11" width="224.6" height="20"/>
+	<rect x="54.4" y="198.6" class="st12" width="36.6" height="20"/>
+	<rect x="54.4" y="227.6" class="st11" width="161.6" height="20"/>
+	<rect x="54.4" y="247.6" class="st12" width="19.6" height="20"/>
+	<text transform="matrix(1 0 0 1 339.47 99.99)" class="st13 st3 st8">$53,929</text>
+	<text transform="matrix(1 0 0 1 242.47 144.99)" class="st13 st3 st8">$38,565</text>
+	<text transform="matrix(1 0 0 1 226.47 192.99)" class="st13 st3 st8">$53,901</text>
+	<text transform="matrix(1 0 0 1 96.47 212.99)" class="st3 st8">$5,902</text>
+	<text transform="matrix(1 0 0 1 164.47 241.99)" class="st13 st3 st8">$25,809</text>
+	<text transform="matrix(1 0 0 1 79.47 262.99)" class="st3 st8">$3,386</text>
+	<text transform="matrix(1 0 0 1 58.47 120.99)" class="st3 st8">NA</text>
+	<text transform="matrix(1 0 0 1 101.47 165.99)" class="st13 st3 st8">$16,167</text>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="395.1" y="1.2" width="49.7" height="46.8"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st14">
+			<g>
+				<defs>
+					<rect id="SVGID_3_" x="395.1" y="1.2" width="49.7" height="46.1"/>
+				</defs>
+				<clipPath id="SVGID_4_">
+					<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+				</clipPath>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
