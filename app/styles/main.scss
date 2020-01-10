@@ -2,6 +2,8 @@ body {
   color: #353535;
 }
 
+
+
 /******************************************
 * VARIABLES
 *******************************************/
@@ -40,7 +42,7 @@ body {
 .alert {
   border: 1px solid #5DFF6C;
   color: #FC10E0;
-  font-weight: 700;
+  font-weight: 900;
   padding: 10px 40%;
   text-transform: uppercase;
 }
@@ -74,7 +76,7 @@ body {
 
 #header-pinned * {
   color: #333333;
-  font-weight: 300;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -250,28 +252,28 @@ footer .content {
 }
    
 h4 {
-    font-size: 34px;
-    font-weight: 900;
-    margin-bottom: 10px;
-    line-height: 1.3;
-     text-transform: uppercase;
-    font-weight: 700;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .credits{
   font-style: italic;
 }
+
 footer p {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 footer h2 {
-    text-transform: uppercase;
-     font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 footer h3, footer h4{
-   font-weight: 700; 
+  font-weight: 500; 
 }
 
 .credits {
@@ -298,6 +300,17 @@ footer h3, footer h4{
 * ACCORDION STYLES
 *******************************************/
 
+h5 {
+  display: inline;
+}
+
+.anchor{
+  display: block;
+  height: 56px; /*same height as header*/
+  margin-top: -56px; /*same height as header*/
+  visibility: hidden;
+}
+
 .collapsing {
   -webkit-transition: none !important;
   transition: none !important;
@@ -317,8 +330,9 @@ div.card-header {
   position: relative;
 }
 
-h5 {
-  display: inline;
+.accordion img {
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .arrow-down {
@@ -331,11 +345,6 @@ h5 {
   transform: rotate(0deg);
   transition: transform 0.25s ease-out;
   width: 0;
-}
-
-.accordion img {
-  margin-bottom: 1rem;
-  width: 100%;
 }
 
 .btn-link {
@@ -370,10 +379,14 @@ h5 {
   transition: transform 0.25s ease-out;
 }
 
-
 /******************************************
 * SVG
 *******************************************/
+
+svg {
+  font-family: $tpc-sans-serif;
+}
+
 #form-illo rect {
   opacity: 0.6;
 }
@@ -385,7 +398,6 @@ h5 {
 #form-illo rect.background-box {
   opacity: 1;
 }
-
 
 #form-illo rect {
   &.active-click {
@@ -401,8 +413,6 @@ h5 {
     opacity: 1;
   }
 }
-
-
 
 /* Illustrator-assigned styles. Some names changed, remaining 'st' classes are for text (?) */
 
@@ -438,7 +448,7 @@ h5 {
 .st3{fill:#FFFFFF;}
 
 .st4 {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .st5{font-size:14px;}
