@@ -2,9 +2,8 @@
 // print styles
 // social intents
 // links for both
-// how do you serve fonts here?
-// IE - viewport on SVG is wrong
-// Safari - does not show SVG via img tag, use 'object'
+
+// svgs - need to use "object", I think. Change font definitions in each one.
 
 
 

@@ -470,6 +470,7 @@ svg {
 
 /* IE ヽ(ಠ_ಠ)ノ */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* https://stackoverflow.com/questions/27970520/svg-with-width-height-doesnt-scale-on-ie9-10-11 */
   svg {
     width: 100%; 
   }
