@@ -9,7 +9,24 @@
 
 
 $(document).ready(function() {
-  var spacingUnit = 60;
+  var spacingUnit = 60,
+      headerHeight = $('#header-pinned').outerHeight();
+  $('div.title-content').css('margin-top', headerHeight + spacingUnit);
+
+  //now mess with URL
+  function parseQueryString(query) {
+          var obj = {},
+              qPos = query.indexOf("?"),
+        tokens = query.substr(qPos + 1).split('&'),
+        i = tokens.length - 1;
+    if (qPos !== -1 || query.indexOf("=") !== -1) {
+      for (; i >= 0; i--) {
+        var s = tokens[i].split('=');
+        obj[unescape(s[0])] = s.hasOwnProperty(1) ? unescape(s[1]) : null;
+      };
+    }
+    return obj;
+  }
 
   var section = window.location.hash,
     anchor = section + '-section',
@@ -25,15 +42,26 @@ $(document).ready(function() {
     $(divHeader + ' > span' ).addClass('rotate-arrow-to-up');
   }
 
-  var headerHeight = $('#header-pinned').outerHeight();
-  $('div.title-content').css('margin-top', headerHeight + spacingUnit);
+  var parameters = parseQueryString(window.location.search);
+
+  if(parameters.hasOwnProperty('print')){
+    $('body').addClass('print');
+  }
+
 
   //fix svg container div height for IE
   var illoWidth = $('#form-illo > svg').width(),
     aspectRatio = 4.534952263311797,
     newHeight = illoWidth * aspectRatio;
   $('#form-illo').height(newHeight);
-  
+
+  $(window).resize(function() {
+      var illoWidth = $('#form-illo > svg').width(),
+      aspectRatio = 4.534952263311797,
+      newHeight = illoWidth * aspectRatio;
+    $('#form-illo').height(newHeight);
+  });
+
   //h/t: https://stackoverflow.com/questions/49636727/why-is-scroll-behaviorsmooth-not-working-but-javascript-window-scroll-smooth-is?newreg=472532a8017f4bc59a4965f7dcf5a84b
   window.smoothScrollTo = function(endX, endY, duration) {
     let startX = window.scrollX || window.pageXOffset,
@@ -41,7 +69,7 @@ $(document).ready(function() {
     distanceX = endX - startX,
     distanceY = endY - startY,
     startTime = new Date().getTime();
-    console.log('start ' + startY + ' end ' + endY)
+  
     // Easing function
     let easeInOutQuart = function(time, from, distance, duration) {
         if ((time /= duration / 2) < 1) return distance / 2 * time * time * time * time + from;
@@ -59,6 +87,8 @@ $(document).ready(function() {
     }, 1000 / 60); // 60 fps
 
   };
+
+
 
   //*********MOUSEOVER **********//
   function mouseoverHilite(sectionID){
@@ -110,11 +140,11 @@ $(document).ready(function() {
   //*********CLICK ********//
   function clickHilite(sectionID){
     
-      var lineItemG = sectionID + '-boxes',
-        cardHeader = sectionID + '-info',
-        section = sectionID + '-section',
-        isAnchorClick = $(event.currentTarget).hasClass('btn'),
-        drawerOpen = $(section).hasClass('show'); 
+    var lineItemG = sectionID + '-boxes',
+      cardHeader = sectionID + '-info',
+      section = sectionID + '-section',
+      isAnchorClick = $(event.currentTarget).hasClass('btn'),
+      drawerOpen = $(section).hasClass('show'); 
 
     if(!isAnchorClick){
       $(sectionID + '-section').collapse('toggle');
@@ -131,12 +161,13 @@ $(document).ready(function() {
 
     if (drawerOpen){
       $('div.card-header').removeClass('active-click');
-   //  history.pushState('', document.title, window.location.pathname + window.location.search);
+
+      history.pushState('', document.title, window.location.pathname + window.location.search);
 
     } else {
       $(lineItemG).children().children().addClass('active-click');
       $(cardHeader + ' > span' ).addClass('rotate-arrow-to-up');
-   //   history.pushState('', '', sectionID)
+      history.pushState('', '', sectionID)
     }
 
     $(section).on('shown.bs.collapse', function(){
@@ -145,7 +176,7 @@ $(document).ready(function() {
     })
   }
 
-  $('.btn-link').on('click', function(event){
+  $('.card-header').on('click', function(event){
     event.preventDefault();
     var formCat = this.getAttribute('data-target').replace('-section','')
     clickHilite(formCat);
@@ -155,37 +186,6 @@ $(document).ready(function() {
     event.preventDefault();
     var formCat = '#' + this.getAttribute('data-target').replace('-section', '')
     clickHilite(formCat);
-  });
-
-  // function print() {
-  //     // getting the tag element I want to print
-  //     // cloning the content so it doesn't get messed
-  //     // remove all the possible scripts that could be embed
-  //     var printContents = $('body').clone().find('script').remove().end().html();
-
-  //     // get all <links> and remove all the <script>'s from the header that could run on the new window
-  //     var allLinks = $('head').clone().find('script').remove().end().html();
-
-  //     // open a new window
-  //     var popupWin = window.open('', '_blank');
-  //     // ready for writing
-  //     popupWin.document.open();
-
-  //     // -webkit-print-color-adjust to keep colors for the printing version
-  //     var keepColors = '<style>body {-webkit-print-color-adjust: exact !important; }</style>';
-
-  //     // writing
-  //     // onload="window.print()" to print straigthaway
-  //     popupWin.document.write('<html><head>' + keepColors + allLinks + '</head><body onload="window.print()">' + printContents + '</body></html>');
-
-  //     // close for writing
-  //     popupWin.document.close();
-
-  $( window ).resize(function() {
-      var illoWidth = $('#form-illo > svg').width(),
-      aspectRatio = 4.534952263311797,
-      newHeight = illoWidth * aspectRatio;
-    $('#form-illo').height(newHeight);
   });
 
 

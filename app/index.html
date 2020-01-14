@@ -142,7 +142,10 @@
 
 
     <div class="container">
+      <div id="print-header">
+        <img src="img/wordmark.png" alt=" " id="print-logo">
 
+      </div>
       <div class="title-content">
 
         <h1 class="hed">Is the Tax Code Neutral on Race?</h1>
@@ -241,10 +244,10 @@
             <text transform="matrix(1 0 0 1 24.5 2147.74)" class="st7 st4 st9">Schedule C</text>
           </g>
           <g id="line-items">
-            <g id="marital-status-boxes">
+            <g id="marital-status-boxes"class="form-link" >
               <g>
                 <rect x="71.5" y="59.5" class="form-1040-box" width="436" height="45" />
-                <a href="#marital-status" class="form-link" data-target="marital-status-section" ><text transform="matrix(1 0 0 1 80.5 85.1841)" class="st3 st4 st5">Filing Status</text></a>
+                <a href="#marital-status"  data-target="marital-status-section" ><text transform="matrix(1 0 0 1 80.5 85.1841)" class="st3 st4 st5">Filing Status</text></a>
               </g>
             </g>
             <g id="taxpayer-identification-boxes">
@@ -256,7 +259,7 @@
             <g id="age-boxes">
               <g>
                 <rect x="71.5" y="178.5" class="form-1040-box" width="436" height="45"/>
-                <a href="#age" class="form-link" data-target="age-section"><text transform="matrix(1 0 0 1 80.807 195.896)" class="st3 st4 st5">Standard Deduction</text><text transform="matrix(1 0 0 1 80.807 212.4719)" class="st3 st4 st5">(Age/Blindness).</text><text transform="matrix(1 0 0 1 226.691 212.4718)" class="st3 st6 st5">Were born before January 2, 1955</text></a>
+                <a href="#age" class="form-link" data-target="age-section"><text transform="matrix(1 0 0 1 80.807 195.896)" class="st3 st4 st5">Standard Deduction</text><text transform="matrix(1 0 0 1 80.807 212.4719)" class="st3 st4 st5">(Age/Blindness).</text><text transform="matrix(1 0 0 1 226.691 206.4718)" class="st3 st6 st5">Were born before January 2, 1955</text></a>
               </g>
             </g>
             <g id="income-boxes">
@@ -458,9 +461,9 @@
         <div class="accordion" id="grouped-tax-fields-accordion">
           <span class="anchor" id="marital-status"> </span>
           <div class="card" >
-            <div class="card-header" id="marital-status-info" data-box="marital-status-boxes">
+            <div class="card-header" id="marital-status-info" data-box="marital-status-boxes" data-toggle="collapse" data-target="#marital-status-section" aria-expanded="true" aria-controls="marital-status-section">
               <a href="#marital-status"><h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#marital-status-section" aria-expanded="true" aria-controls="marital-status-section">
+                <button class="btn btn-link" type="button" >
                   Marital status
                 </button>
               </h5></a>
@@ -468,13 +471,18 @@
             </div>
             <div id="marital-status-section" class="collapse" aria-labelledby="marital-status-info" data-box="marital-status-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+                <div class="share-links">
+                  <a class="print-link" href="index.html?print=true#marital-status" target="_blank"><span>PRINT</span></a> 
+                  <a href="" class="social-link"><span>SHARE</span></a>
+                </div>
+                <div class="clear"></div>
                 <p>
                   Tax liabilities depend on a taxpayer's filing status, meaning whether a taxpayer is married or single, and if single, whether he or she lives with children or other dependents. Single taxpayers with children or other dependents are considered heads of household. Couples who marry may face <a href="https://tpc-marriage-calculator.urban.org/">financial penalties or bonuses</a>. <a href="https://www.taxpolicycenter.org/taxvox/better-flowers-and-chocolate-tpc-releases-its-updated-marriage-penalty-and-bonus-calculator">Dual-earner couples with similar incomes</a> are more likely to face a marriage penalty, paying more income tax as a married couple than they would if they each filed separately. Under current law, many more couples receive marriage bonuses than incur penalties from filing jointly. 
                 </p>
                 <p>
                   In 2018, half of all white households were married couples, compared with almost 60 percent of Asian households, 48 percent of Hispanic households, and 28 percent of Black households. Nearly 20 percent of black and Hispanic households reported living with children and no partner present, compared with just 8 percent of white households.
                 </p>
-                <object data="img/marital-status.svg" type="image/svg+xml"></object>
+                <img src="img/marital-status.jpg" ></img>
                 <p>
                   The overall marriage rate in America has <a href="https://www.urban.org/research/publication/fewer-marriages-more-divergence-marriage-projections-millennials-age-40">declined over the past 50 years</a>, but it has declined especially among black households. Marriage rates are typically higher for higher-income couples, and people of color are likelier to cite <a href="https://www.pewresearch.org/fact-tank/2017/09/14/as-u-s-marriage-rate-hovers-at-50-education-gap-in-marital-status-widens/">financial instability as a major reason</a> for not getting married.
                 </p>
@@ -486,9 +494,9 @@
           </div>
           <span class="anchor" id="taxpayer-identification"> </span>
           <div class="card">
-            <div class="card-header" id="taxpayer-identification-info" data-box="taxpayer-identification-boxes">
+            <div class="card-header" id="taxpayer-identification-info" data-box="taxpayer-identification-boxes" data-toggle="collapse" data-target="#taxpayer-identification-section" aria-expanded="false" aria-controls="taxpayer-identification-section">
               <a href="#taxpayer-identification"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#taxpayer-identification-section" aria-expanded="false" aria-controls="taxpayer-identification-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Taxpayer identification
                 </button>
               </h5></a>
@@ -496,13 +504,18 @@
             </div>
             <div id="taxpayer-identification-section" class="collapse" aria-labelledby="taxpayer-identification-info" data-box="taxpayer-identification-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+                <div class="share-links">
+                  <a class="print-link" href="index.html?print=true#taxpayer-identification" target="_blank"><span>PRINT </span></a> 
+                  <a href="" class="social-link"><span>SHARE </span></a>
+                </div>
+                <div class="clear"></div>
                 <p>
                   A Social Security number is a crucial identifier for people in the United States. It is used to track earnings and years worked to determine eligibility for Social Security benefits, unemployment insurance, and many public assistance programs. Most taxpayers use a Social Security Number as an identifier on their individual income tax returns. Taxpayers ineligible for SSNs, such as undocumented immigrants and certain other noncitizens, generally file taxes using an <a href="https://www.irs.gov/individuals/international-taxpayers/taxpayer-identification-numbers-tin#itin">Individual Taxpayer Identification Number issued</a> by the IRS. Applying for or renewing an Individual Taxpayer Identification Number, however, can be <a href="https://taxpayeradvocate.irs.gov/news/nta-blog-ITIN-Improvements">particularly challenging</a>.
                 </p>
                 <p>
                   In 2017, around <a href="https://www.pewresearch.org/fact-tank/2019/06/12/us-unauthorized-immigrant-population-2017/">10.5 million people</a> in the United States were undocumented immigrants, though estimates vary. Most came from Mexico and Central America and resided in the most populous states, with a median stay of over 15 years. Over 70 percent of undocumented immigrants were in the labor force; they constitute about 5 percent of the total US labor force.
                 </p>
-                <!-- <img src="" alt=" "> -->
+                <img src="img/taxpayer-identification.jpg" alt=" ">
                 <p>
                   Many undocumented immigrants pay income taxes on their wages, often through withholding on their paychecks. These immigrants often file income tax returns through an <a href="https://www.taxpolicycenter.org/taxvox/why-do-we-make-it-so-hard-immigrants-pay-their-taxes">especially complicated filing process</a>. Further, undocumented taxpayers have contributed <a href="https://www.ssa.gov/oact/NOTES/pdf_notes/note151.pdf">billions in payroll taxes</a> while remaining ineligible for Social Security benefits or most other tax or nontax public benefits. 
                 </p>
@@ -514,9 +527,9 @@
           </div>
           <span class="anchor" id="age"> </span>
           <div class="card " >
-            <div class="card-header" id="age-info" data-box="age-boxes">
+            <div class="card-header" id="age-info" data-box="age-boxes" data-toggle="collapse" data-target="#age-section" aria-expanded="false" aria-controls="age-section">
               <a href="#age"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#age-section" aria-expanded="false" aria-controls="age-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Age
                 </button>
               </h5></a>
@@ -524,13 +537,18 @@
             </div>
             <div id="age-section" class="collapse" aria-labelledby="age-info" data-box="age-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#age" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div>
                 <p>
                   Several federal income tax provisions are connected to a taxpayer's age. For example, taxpayers age 65 or older in 2019 have a slightly higher income threshold for filing taxes because they may increase their <a href="https://www.taxpolicycenter.org/briefing-book/what-standard-deduction">standard deduction</a> by an additional $1,650 (for single or head-of-household filers). They may also claim a nonrefundable <a href="https://www.taxpolicycenter.org/fiscal-fact/credit-elderly-and-disabled-ff04152019">credit for the elderly and disabled</a>, though relatively few taxpayers do so.
                 </p>
                 <p>
                   Age distribution among taxpayers varies widely by race and ethnicity: the median age for Asian people is 37, compared with 34 for black people, 30 for Hispanic people, and 44 for white people. About two-thirds of all Hispanic people and over half of Asian and black people are either generation Z or millennials; one-third of all white people are either baby boomers or from the Silent or Greatest Generations.
                 </p>
-                <object data="img/age-distribution.svg" type="image/svg+xml"></object>
+                <img src="img/age-distribution.jpg" alt=" "></img>
                 <p>
                   Almost half of people paying no federal income taxes are <a href="https://www.taxpolicycenter.org/taxvox/remember-47-percent-who-pay-no-income-taxes-they-are-not-who-you-think">retirees living on Social Security benefits</a>. But current Social Security benefits are often not sufficient for older adults to live on, and older adults of color face <a href="https://www.cbpp.org/research/social-security/policy-basics-top-ten-facts-about-social-security">higher poverty rates</a>. 
                 </p>
@@ -542,9 +560,9 @@
           </div>
           <span class="anchor" id="income"> </span>
           <div class="card " >
-            <div class="card-header" id="income-info" data-box="income-boxes">
+            <div class="card-header" id="income-info" data-box="income-boxes" data-toggle="collapse" data-target="#income-section" aria-expanded="false" aria-controls="income-section">
               <a href="#income"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#income-section" aria-expanded="false" aria-controls="income-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Income
                 </button>
               </h5></a>
@@ -552,13 +570,18 @@
             </div>
             <div id="income-section" class="collapse" aria-labelledby="income-info" data-box="income-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#income" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div>
                 <p>
                   Adjusted gross income (AGI) is the income taxpayers receive from such sources as wages or salaries and interest or dividends, minus certain expenses such as student loan interest, or educator and moving expenses. It is not a comprehensive measure of income; it <a href="https://www.taxpolicycenter.org/resources/income-measure-used-distributional-analyses-tax-policy-center">excludes items that are tax exempt</a> such as some employee benefits and retirement income. However, the distribution of AGI from <a href="https://www.irs.gov/statistics/soi-tax-stats-individual-statistical-tables-by-size-of-adjusted-gross-income">income tax returns</a> illustrates income disparities in the US; those with over $100,000 in AGI constitute less than 20 percent of tax returns but report about 60 percent of total AGI.
                 </p>
                 <p>
                   Income disparities are especially prevalent by race and ethnicity. In 2018, White and Asian households had significantly higher average income as well as higher income per household member than Black and Hispanic households. Over half of Black households and almost half of Hispanic households had income below $50,000, compared with 35 percent of White households. Asian households were more likely to have high incomes, but wide income disparities exist among Asians related to <a href="">national origin</a>.
                 </p>
-                <object data="img/income.svg" type="image/svg+xml"></object>
+                <img src="img/income.jpg" alt=" "></img>
                 <p>
                   Racial income gaps persist for many reasons, including <a href="https://www.pnas.org/content/114/41/10870.full">hiring discrimination</a> and <a href="https://www.naacp.org/criminal-justice-fact-sheet/">disproportionately high incarceration rates</a> for Black and Hispanic people. The federal income tax system plays a role in reducing income inequality because it is <a href="https://www.taxpolicycenter.org/briefing-book/are-federal-taxes-progressive">progressive</a> overall, with a graduated rate structure, standard deduction, and refundable tax credits.   
                 </p>
@@ -570,9 +593,9 @@
           </div>
           <span class="anchor" id="salary-and-wages"> </span>
           <div class="card " >
-            <div class="card-header" id="salary-and-wages-info" data-box="salary-and-wages-boxes">
+            <div class="card-header" id="salary-and-wages-info" data-box="salary-and-wages-boxes" data-toggle="collapse" data-target="#salary-and-wages-section" aria-expanded="false" aria-controls="salary-and-wages-section">
               <a href="#salary-and-wages"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#salary-and-wages-section" aria-expanded="false" aria-controls="salary-and-wages-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Salary and wages
                 </button>
               </h5></a>
@@ -580,13 +603,18 @@
             </div>
             <div id="salary-and-wages-section" class="collapse" aria-labelledby="salary-and-wages-info" data-box="salary-and-wages-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#salary-and-wages" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div>
                 <p>
                   Salary and wages are the largest source of income for low- and middle-income taxpayers, comprising <a href="https://www.irs.gov/statistics/soi-tax-stats-individual-statistical-tables-by-size-of-adjusted-gross-income">over 70 percent of adjusted gross income (AGI)</a> for those with AGI under $10 million, but less than 20 percent for those with AGI over $10 million in 2017. Wage disparities are particularly striking when comparing earnings of women of color to those of White men; the <a href="https://www.nationalpartnership.org/our-work/resources/economic-justice/fair-pay/quantifying-americas-gender-wage-gap.pdf">median annual pay</a> for a Black, Hispanic, or Native American woman working a full-time job is about 40 to 45 percent less than that of a White man.
                 </p>
                 <p>
                   Asian, Black, and Hispanic people each have larger shares of full-time workers earning <a href="https://www.epi.org/blog/workers-of-color-are-far-more-likely-to-be-paid-poverty-level-wages-than-white-workers/">poverty-level wages</a> than White people. Among those with at least some income from wages and salaries, White and Asian people report higher averages compared with Black and Hispanic people. The share reporting any wage income is somewhat lower for Whites, due to a larger share of retirees. 
                 </p>
-              <!--   <img src="" alt=""> -->
+                <img src="img/wages-and-salary.jpg" alt=" ">
                 <p>
                   Between 2000 and 2018, even <a href="https://www.epi.org/publication/state-of-american-wages-2018/">controlling for factors like education, age, and geography</a>, the wage gap between Black and White workers grew larger, while the Hispanic-White wage gap remained fairly stable.
                 </p>
@@ -598,9 +626,9 @@
           </div>
           <span class="anchor" id="capital-gains-and-dividends"> </span>
           <div class="card " >
-            <div class="card-header" id="capital-gains-and-dividends-info" data-box="capital-gains-and-dividends-boxes">
+            <div class="card-header" id="capital-gains-and-dividends-info" data-box="capital-gains-and-dividends-boxes" data-toggle="collapse" data-target="#capital-gains-and-dividends-section" aria-expanded="false" aria-controls="capital-gains-and-dividends-section">
               <a href="#capital-gains-and-dividends"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#capital-gains-and-dividends-section" aria-expanded="false" aria-controls="capital-gains-and-dividends-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Capital gains and dividends
                 </button>
               </h5></a>
@@ -608,13 +636,18 @@
             </div>
             <div id="capital-gains-and-dividends-section" class="collapse" aria-labelledby="capital-gains-and-dividends-info" data-box="capital-gains-and-dividends-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#capital-gains-and-dividends" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div>
                 <p>
                   Capital gains are profits from sales of capital assets, such as shares of stock or investments in businesses or land. Capital gains are taxed only when "realized" (when underlying assets are sold). Unlike taxes on wages, which are generally withheld as earned and must be paid annually, taxes on capital gains can be deferred by not selling the asset. Preferential tax treatment of capital gains contributes to growing disparities in wealth between White and Black and Hispanic families. Those with access to capital assets can benefit from <a href="https://www.taxpolicycenter.org/briefing-book/how-are-capital-gains-taxed">preferential rates</a> on assets held for more than one year before being realized, as well as from the <a href="https://www.taxpolicycenter.org/briefing-book/how-do-estate-gift-and-generation-skipping-transfer-taxes-work">"step-up in basis" provision</a>, which effectively exempts income tax on unrealized gains on assets held until death. In addition, qualified dividends from corporate stock ownership also receive a preferential tax rate. These provisions will cost the federal government <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">over $700 billion between 2019 and 2022</a>.
                 </p>
                 <p>
                   Higher shares of White families <a href="https://www.federalreserve.gov/econres/notes/feds-notes/recent-trends-in-wealth-holding-by-race-and-ethnicity-evidence-from-the-survey-of-consumer-finances-20170927.htm">hold almost every type of financial and nonfinancial asset</a>. Disparities in the value of corporate stocks and business equity, which generate a large share of <a href="https://www.cbo.gov/publication/51831">total net capital gains</a>, are even wider: in 2016, White families' holdings were <a href="https://www.federalreserve.gov/econres/files/BulletinCharts.pdf">three to four times higher</a> in median value than those of Black and Hispanic families.
                 </p>
-                <object data="img/capital-gains-and-dividends.svg" type="image/svg+xml"></object>
+                <img src="img/capital-gains-and-dividends.jpg" alt=" "></img>
                 <p>
                   The top 1 percent of taxpayers by income, disproportionately less likely to be households of color, will receive over <a href="https://www.taxpolicycenter.org/model-estimates/individual-income-tax-expenditures-october-2018/t18-0183-tax-benefit-preferential">75 percent of total benefits</a> from the preferential treatment of qualified dividends and capital gains in 2018, according to <a href="https://www.taxpolicycenter.org/publications/distributional-effects-individual-income-tax-expenditures-after-2017-tax-cuts-and-jobs">TPC estimates</a>.  
                 </p>
@@ -626,9 +659,9 @@
           </div>
           <span class="anchor" id="social-security-benefits"> </span>
           <div class="card " >
-            <div class="card-header" id="social-security-benefits-info" data-box="social-security-benefits-boxes">
+            <div class="card-header" id="social-security-benefits-info" data-box="social-security-benefits-boxes" data-toggle="collapse" data-target="#social-security-benefits-section" aria-expanded="false" aria-controls="social-security-benefits-section">
               <a href="#social-security-benefits"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#social-security-benefits-section" aria-expanded="false" aria-controls="social-security-benefits-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Social security benefits
                 </button>
               </h5></a>
@@ -636,13 +669,18 @@
             </div>
             <div id="social-security-benefits-section" class="collapse" aria-labelledby="social-security-benefits-info" data-box="social-security-benefits-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#social-security-benefits" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div>
                 <p>
                   About half of all Social Security recipients are <a href="https://www.cbpp.org/research/social-security/taxing-social-security-benefits-is-sound-policy">not taxed on their benefits</a>. Social Security benefits are partially or completely tax-exempt for beneficiaries whose income (including Social Security benefits) is below a <a href="https://www.irs.gov/faqs/social-security-income">specific value</a>. The partial exclusion <a href="https://www.taxpolicycenter.org/model-estimates/individual-income-tax-expenditures-october-2018/t18-0149-tax-benefit-partial">primarily benefits middle-income older taxpayers</a>, because those with lower incomes pay little or no income tax regardless of the exclusion. The exclusion of untaxed Social Security benefits will cost the federal government about <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">$162 billion between 2019 and 2022</a>.
                 </p>
                 <p>
                   Of those over 65 in 2018, 85 percent of White people reported some income from Social Security benefits, compared with 81 percent of Black people, 80 percent of Hispanic people, and 71 percent of Asian people. <a href="https://www.cdc.gov/nchs/data/nvsr/nvsr68/nvsr68_07-508.pdf">Lifetime expectancy</a> also varies by race, with Black people on average receiving fewer years of Social Security benefits. However, older adults of color tend to have lower average incomes, and may be more likely to have their benefits exempt from taxation.
                 </p>
-                <!-- <img src="" alt=""> -->
+                <img src="img/social-security-benefits.jpg" alt=" ">
                 <p>
                   Social Security trust funds are primarily financed by payroll taxes on wages and salaries capped at <a href="http://cepr.net/publications/reports/who-pays-if-we-modify-the-social-security-payroll-tax-cap">$132,900 in 2019</a>, which effectively makes them somewhat regressive because those with the highest incomes pay a smaller share in payroll taxes. However, Social Security's progressive benefits formula, disability insurance, and dependent benefits make the overall program (taxes paid and benefits received) progressive and have been critical in improving <a href="https://www.cbpp.org/research/social-security/social-security-lifts-more-americans-above-poverty-than-any-other-program">financial security for older people of color</a>. 
                 </p>
@@ -654,9 +692,9 @@
           </div>
           <span class="anchor" id="retirement-savings"></span>
           <div class="card " >
-            <div class="card-header" id="retirement-savings-info" data-box="retirement-savings-boxes">
+            <div class="card-header" id="retirement-savings-info" data-box="retirement-savings-boxes" data-toggle="collapse" data-target="#retirement-savings-section" aria-expanded="false" aria-controls="retirement-savings-section">
               <a href="#retirement-savings"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#retirement-savings-section" aria-expanded="false" aria-controls="retirement-savings-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Retirement savings
                 </button>
               </h5></a>
@@ -664,13 +702,18 @@
             </div>
             <div id="retirement-savings-section" class="collapse" aria-labelledby="retirement-savings-info" data-box="retirement-savings-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#retirement-savings" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div>
                 <p>
                   <a href="https://www.taxpolicycenter.org/briefing-book/what-kinds-tax-favored-retirement-arrangements-are-there">Retirement savings</a> are a crucial vehicle of wealth accumulation for many American families. Contributions to and earnings from assets in retirement plans are subject to preferential tax treatment. Those with access to retirement plans—and sufficient income to contribute to their plans—can accumulate greater savings, with the value of their assets growing effectively tax-free over their lifetime. 
                 </p>
                 <p>
                   In 2016, 60 percent of White families <a href="https://www.federalreserve.gov/econres/scfindex.htm">held retirement accounts</a>, compared with 34 percent of Black families and 30 percent of Hispanic families. For families holding assets, the White-to-Black and White-to-Hispanic ratio in average value of retirement accounts has grown from twice to three times as high between 1989 and 2016.
                 </p>
-                <object data="img/retirement-savings.svg" type="image/svg+xml"></object>
+                <img src="img/retirement-savings.jpg" alt=" "></img>
                 <p>
                   The federal government spends <a href="https://www.taxpolicycenter.org/briefing-book/how-large-are-tax-expenditures-retirement-saving">more than $250 billion a year</a> to encourage retirement savings through tax subsidies. But these benefits primarily go to higher-income families, with nearly 60 percent of total benefits going to the <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">top 20 percent of taxpayers by income</a>. Black and Hispanic households are less likely to be among the <a href="https://www.census.gov/data/tables/time-series/demo/income-poverty/cps-hinc/hinc-01.html">highest income households</a>, and are therefore less likely to benefit. 
                 </p>
@@ -682,9 +725,9 @@
           </div>
           <span class="anchor" id="children-and-dependents"> </span>
           <div class="card " >
-            <div class="card-header" id="children-and-dependents-info" data-box="children-and-dependents-boxes">
+            <div class="card-header" id="children-and-dependents-info" data-box="children-and-dependents-boxes" data-toggle="collapse" data-target="#children-and-dependents-section" aria-expanded="false" aria-controls="children-and-dependents-section">
               <a href="#children-and-dependents"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#children-and-dependents-section" aria-expanded="false" aria-controls="children-and-dependents-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Children and dependents
                 </button>
               </h5></a>
@@ -692,13 +735,18 @@
             </div>
             <div id="children-and-dependents-section" class="collapse" aria-labelledby="children-and-dependents-info" data-box="children-and-dependents-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#children-and-dependents" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div>
                 <p>
                   The <a href="https://www.taxpolicycenter.org/briefing-book/what-child-tax-credit">child tax credit (CTC)</a> provides eligible taxpayers up to $2,000 for each child under age 17. Most families with children benefit, but the credit is reduced for those earning over $200,000 (or $400,000 for joint filers). The credit is partially refundable (up to a maximum of $1,400), allowing families to benefit even if they do not have any income tax liability.  A $500 nonrefundable credit is available for those who may not qualify for the CTC (for example, because their child is 17 or older). Along with other smaller credits for <a href="https://www.taxpolicycenter.org/briefing-book/what-adoption-tax-credit">adoptions</a> and <a href="https://www.taxpolicycenter.org/briefing-book/how-does-tax-system-subsidize-child-care-expenses">child care expenses</a>, these provisions will altogether cost nearly <a href="https://www.taxpolicycenter.org/briefing-book/what-are-largest-tax-expenditures">$500 billion between 2019 and 2022</a>.
                 </p>
                 <p>
                   <a href="https://www.childstats.gov/americaschildren/demo.asp">About half of all US children</a> are White, but households of color are likelier to have children. In 2018, 42 percent of Hispanic households had children under 18, compared with 36 percent of Asian households, 28 percent of Black households, and 23 percent of White households. Children of color are likelier to be in <a href="https://datacenter.kidscount.org/data/tables/44-children-in-poverty-by-race-and-ethnicity">conditions of poverty</a>; over one in four Black, Hispanic, and Native American children were in families with incomes below the federal poverty level in 2018.
                 </p>
-                <!-- <img src="" alt=""> -->
+                <img src="img/children-and-dependents.jpg" alt=" ">
                 <p>
                   Overall, a larger share of families of color benefit from the CTC as, on average, they have <a href="https://www2.census.gov/programs-surveys/demo/tables/families/2018/cps-2018/tabh3.xls">larger families</a> and <a href="https://www.census.gov/data/tables/time-series/demo/income-poverty/cps-hinc/hinc-01.html">lower average incomes</a>. However, the lowest-income families, also more likely to be families of color, are <a href="https://www.taxpolicycenter.org/briefing-book/what-child-tax-credit">unable to qualify for the full CTC</a> due to insufficient earnings and refundable amount limits.
                 </p>
@@ -710,9 +758,9 @@
           </div>
           <span class="anchor" id="work-incentives"> </span>
           <div class="card " >
-            <div class="card-header" id="work-incentives-info" data-box="work-incentives-boxes">
+            <div class="card-header" id="work-incentives-info" data-box="work-incentives-boxes" data-toggle="collapse" data-target="#work-incentives-section" aria-expanded="false" aria-controls="work-incentives-section">
               <a href="#work-incentives"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#work-incentives-section" aria-expanded="false" aria-controls="work-incentives-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Earned income tax credit
                 </button>
               </h5></a>
@@ -720,13 +768,18 @@
             </div>
             <div id="work-incentives-section" class="collapse" aria-labelledby="work-incentives-info" data-box="work-incentives-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#work-incentives" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div> 
+              <div class="clear"></div> 
                 <p>
                   The earned income tax credit (EITC or EIC) provides income support to <a href="https://www.taxpolicycenter.org/briefing-book/what-earned-income-tax-credit">low- and moderate-income working taxpayers</a>. While it is available to those without children, the credit is far more generous for taxpayers with children; in 2019, eligible families with three or more children have a maximum credit amount of $6,557. Almost 90 percent of total EITC benefits accrue to <a href="https://www.taxpolicycenter.org/model-estimates/tax-benefit-earned-income-tax-credit/tax-benefit-earned-income-tax-credit-baseline">lower-income households</a>. The credit is one of the largest tax expenditures for the federal government, costing <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">almost $300 billion between 2019 and 2022</a>.
                 </p>
                 <p>
                   Black and Hispanic households are disproportionately represented among lower-income households with children. In 2018, Black households comprised 14 percent of all households with children, but 22 percent of those with income below $55,000 (around the <a href="https://www.irs.gov/credits-deductions/individuals/earned-income-tax-credit/eitc-income-limits-maximum-credit-amounts-next-year">maximum adjusted gross income to qualify for the EITC</a>). Similarly, Hispanic households comprised about a third of all lower-income households with children, higher than their overall share of households.
                 </p>
-                <img src="img/work-incentives.svg" alt="">
+                <img src="img/work-incentives.jpg" alt=" ">
                 <p>
                   Overall, White households are the largest share of EITC recipients (since they comprise a majority of the working population), but <a href="https://www.cbpp.org/research/federal-tax/women-of-color-especially-benefit-from-working-family-tax-credits">women of color</a>, in particular, are disproportionately likely to benefit from the credit. The EITC has been praised as an effective antipoverty measure that crosses <a href="https://www.brookings.edu/blog/the-avenue/2017/04/18/the-earned-income-tax-credit-and-the-white-working-class/">occupational, educational, and geographic lines</a>. 
                 </p>
@@ -738,9 +791,9 @@
           </div>
           <span class="anchor" id="pass-through-business"> </span>
           <div class="card " >
-            <div class="card-header" id="pass-through-business-info" data-box="pass-through-business-boxes">
+            <div class="card-header" id="pass-through-business-info" data-box="pass-through-business-boxes" data-toggle="collapse" data-target="#pass-through-business-section" aria-expanded="false" aria-controls="pass-through-business-section">
               <a href="#pass-through-business"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#pass-through-business-section" aria-expanded="false" aria-controls="pass-through-business-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Pass through businesses
                 </button>
               </h5></a>
@@ -748,13 +801,18 @@
             </div>
             <div id="pass-through-business-section" class="collapse" aria-labelledby="pass-through-business-info" data-box="pass-through-business-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#pass-through-business" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div> 
+              <div class="clear"></div> 
                 <p>
                   All businesses are not taxed in the same way. "Pass-through" (or flow-through) businesses like sole proprietorships, partnerships, limited liability companies, and S corporations are not subject to corporate income tax. Instead, their profits are taxed as ordinary income for their individual owners. Pass-through businesses account for a rising share of <a href="https://www.taxpolicycenter.org/briefing-book/what-are-pass-through-businesses">total business returns</a>. The 2017 tax law created a new and temporary 20 percent deduction for certain forms of pass-through income that it is estimated to cost the federal government <a href="https://www.taxpolicycenter.org/briefing-book/what-tax-incentives-exist-higher-education">more than $225 billion between 2019 and 2022</a>.
                 </p>
                 <p>
                   About 6.4 percent of White people reported self-employment income in 2018, compared with 6 percent of Hispanic people, 5 percent of Asian people, and 4.4 percent of Black people. But the average amounts reported, for those with at least some self-employment income, varied widely: Asians reported about $54,000 on average from nonfarm self-employment income, compared with $39,000 for White people, $36,000 for Hispanic people, and about $26,000 for Black people.
                 </p>
-                <img src="img/pass-through-business.svg" alt="">
+                <img src="img/pass-through-business.jpg" alt=" ">
                 <p>
                   Over half of total benefits from the new deduction for pass-through business income will accrue to the <a href="https://www.taxpolicycenter.org/model-estimates/individual-income-tax-expenditures-october-2018/t18-0213-tax-benefit-20-percent">top 1 percent of taxpayers by income</a>. People of color own significantly <a href="https://www.mbda.gov/sites/mbda.gov/files/migrated/files-attachments/2012SBO_MBEFactSheet020216.pdf">fewer and smaller businesses</a>, though their share of businesses is increasing over time.
                 </p>
@@ -766,9 +824,9 @@
           </div>
           <span class="anchor"id="real-estate-and-farm-income"> </span>
           <div class="card " >
-            <div class="card-header" id="real-estate-and-farm-income-info" data-box="real-estate-and-farm-income-boxes">
+            <div class="card-header" id="real-estate-and-farm-income-info" data-box="real-estate-and-farm-income-boxes" data-toggle="collapse" data-target="#real-estate-and-farm-income-section" aria-expanded="false" aria-controls="real-estate-and-farm-income-section">
               <a href="#real-estate-and-farm-income"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#real-estate-and-farm-income-section" aria-expanded="false" aria-controls="real-estate-and-farm-income-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Rental real estate and property income
                 </button>
               </h5></a>
@@ -776,13 +834,18 @@
             </div>
             <div id="real-estate-and-farm-income-section" class="collapse" aria-labelledby="real-estate-and-farm-income-info" data-box="real-estate-and-farm-income-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#real-estate-and-farm-income" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div> 
+              <div class="clear"></div> 
                 <p>
                   Various provisions in the federal income tax code encourage ownership of property beyond a primary home. These include tax preferences for certain investment property, rental housing, and agricultural activities. These provisions are relatively small in scope, but are projected to cost the federal government <a href="https://home.treasury.gov/system/files/131/Tax-Expenditures-FY2020.pdf">almost $60 billion between 2019 and 2022</a>.
                 </p>
                 <p>
                   In 2018, White and Asian people reported <a href="https://www.census.gov/data/tables/time-series/demo/income-poverty/cps-pinc/pinc-09.html">income from rents, royalties, estates, or trusts</a> at higher rates than Black or Hispanic people. Furthermore, among families holding other residential property or equity in nonresidential property, the median value for White families was two to seven times higher than for Black or Hispanic families.
                 </p>
-                <img src="img/real-estate-and-farm-income.svg" alt="">
+                <img src="img/real-estate-and-farm-income.jpg" alt=" ">
                 <p>
                   Tax incentives for property ownership mostly benefit households with <a href="http://apps.urban.org/features/wealth-inequality-charts/">capital asset holdings</a>, which are less likely to be families of color. While farm income makes up a <a href="https://www.irs.gov/pub/irs-soi/17in14ar.xls">small share of all property income</a>, disparities by race are particularly prevalent, with White people owning 98 percent and operating 94 percent of <a href="https://link.springer.com/article/10.1007/s10460-018-9883-3">all farmland</a>; farmers of color are more likely to be tenants rather than owners.
                 </p>
@@ -794,9 +857,9 @@
           </div>
           <span class="anchor" id="healthcare"> </span>
           <div class="card " >
-            <div class="card-header" id="healthcare-info" data-box="healthcare-boxes">
+            <div class="card-header" id="healthcare-info" data-box="healthcare-boxes" data-toggle="collapse" data-target="#healthcare-section" aria-expanded="false" aria-controls="healthcare-section">
               <a href="#healthcare"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#healthcare-section" aria-expanded="false" aria-controls="healthcare-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Healthcare
                 </button>
               </h5></a>
@@ -804,13 +867,18 @@
             </div>
             <div id="healthcare-section" class="collapse" aria-labelledby="healthcare-info" data-box="healthcare-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#healthcare" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div> 
                 <p>
                   Various tax incentives exist to subsidize health care costs, such as the exclusion for employer contributions to health insurance plans and the deduction for medical expenses. Altogether, these will reduce federal government revenues by about <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">$1.1 trillion between 2019 and 2022</a>, primarily because of the exclusion for employer-provided health coverage. <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">Almost half of total benefits</a> from the exclusion of employer-sponsored benefits and the deduction for self-employment health insurance premiums go to the top 20 percent of taxpayers by income. By contrast, <a href="https://www.taxpolicycenter.org/briefing-book/what-are-premium-tax-credits">premium tax credits</a>, which account for about a quarter of forgone revenue, primarily benefit low- and middle-income families that are not covered by other health coverage, and are more likely to benefit households of color.
                 </p>
                 <p>
                   In 2018, 18 percent of Hispanic households reported having no health insurance coverage throughout the year, compared with 10 percent of Black households, and 7 percent and 5 percent of Asian and White households, respectively. 
                 </p>
-                <img src="img/healthcare.svg" alt="">
+                <img src="img/healthcare.jpg" alt=" ">
                 <p>
                   Major health care policies have changed over the past decade with the passage of <a href="https://www.taxpolicycenter.org/briefing-book/what-tax-changes-did-affordable-care-act-make">the Affordable Care Act</a>. Due to the subsequent <a href="https://www.kff.org/disparities-policy/issue-brief/changes-in-health-coverage-by-race-and-ethnicity-since-implementation-of-the-aca-2013-2017/">expansion of both private and Medicaid coverage</a>, health insurance coverage rates have increased among all nonelderly people, with particularly large gains among people of color. 
                 </p>
@@ -823,9 +891,9 @@
 
           <span class="anchor" id="higher-education"> </span>
           <div class="card " >
-            <div class="card-header" id="higher-education-info" data-box="higher-education-boxes">
+            <div class="card-header" id="higher-education-info" data-box="higher-education-boxes" data-toggle="collapse" data-target="#higher-education-section" aria-expanded="false" aria-controls="higher-education-section">
               <a href="#higher-education"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#higher-education-section" aria-expanded="false" aria-controls="higher-education-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Higher education
                 </button>
               </h5></a>
@@ -833,13 +901,18 @@
             </div>
             <div id="higher-education-section" class="collapse" aria-labelledby="higher-education-info" data-box="higher-education-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#higher-education" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div> 
                 <p>
                   The American Opportunity Tax Credit, Lifetime Learning Credit, and <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">other tax preferences</a> are aimed at increasing access to higher education and offsetting rising costs. Altogether, these will cost the federal government about <a href="https://www.taxpolicycenter.org/briefing-book/what-tax-incentives-exist-higher-education">$120 billion between 2019 and 2022</a>. However, studies have shown that these subsidies <a href="https://www.nber.org/papers/w20833.pdf">have not significantly increased</a> access to higher education among low-income families. <a href="https://www.taxpolicycenter.org/briefing-book/what-tax-incentives-exist-help-families-pay-college-0">Middle- to upper-income families</a>, less likely to be families of color, receive the largest share of benefits from direct higher education tax subsidies. Students of color are more likely to receive aid from need-based <a href="https://studentaid.ed.gov/sa/types/grants-scholarships/pell">Pell grants</a>.
                 </p>
                 <p>
                   Despite roughly similar <a href="https://nces.ed.gov/programs/digest/d18/tables/dt18_302.60.asp">higher education enrollment rates</a> between White, Black, and Hispanic students, <a href="https://nces.ed.gov/programs/digest/d18/tables/dt18_326.10.asp">undergraduate completion rates</a> for full-time students vary by race; 64 percent of White students graduate with a bachelor's degree within six years, compared with 39 percent of Black students and 54 percent of Hispanic students. Overall, Black and Hispanic people have lower bachelor's degree attainment than both White and Asian people.
                 </p>
-                <!-- <img src="" alt=""> -->
+                 <img src="img/higher-education.jpg" alt=" ">
                 <p>
                   Higher education has positive effects toward <a href="https://www.bls.gov/careeroutlook/2018/data-on-display/education-pays.htm">employment and income security</a>, as well as <a href="https://www.taxpolicycenter.org/fiscal-fact/education-and-financial-assets-ff05132019">lifelong wealth-building opportunities</a>. But despite narrowing bachelor's degree enrollment gaps, attainment gaps between White students and Black and Hispanic students have <a href="https://nces.ed.gov/programs/digest/d17/tables/dt17_104.10.asp">widened since 1990</a>.
                 </p>
@@ -852,9 +925,9 @@
 
           <span class="anchor" id="student-loan-debt"> </span>
           <div class="card " >
-            <div class="card-header" id="student-loan-debt-info" data-box="student-loan-debt-boxes">
+            <div class="card-header" id="student-loan-debt-info" data-box="student-loan-debt-boxes" data-toggle="collapse" data-target="#student-loan-debt-section" aria-expanded="false" aria-controls="student-loan-debt-section">
               <a href="#student-loan-debt"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#student-loan-debt-section" aria-expanded="false" aria-controls="student-loan-debt-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Student loan debt
                 </button>
               </h5></a>
@@ -862,13 +935,18 @@
             </div>
             <div id="student-loan-debt-section" class="collapse" aria-labelledby="student-loan-debt-info" data-box="student-loan-debt-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#student-loan-debt" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div> 
                 <p>
                   The <a href="https://www.taxpolicycenter.org/briefing-book/what-tax-incentives-exist-help-families-pay-college-0">student loan interest deduction</a> allows certain taxpayers with qualified student loans to reduce their taxable income by interest paid during the year, up to $2,500. Only taxpayers with adjusted gross income under $80,000 ($165,000 for joint filers) can use the deduction, and it costs the federal government about <a href="https://www.taxpolicycenter.org/briefing-book/what-tax-incentives-exist-higher-education">$2 billion each year</a>. The deduction is of no benefit to low-income families with zero income tax liability; thus it <a href="https://www.taxpolicycenter.org/model-estimates/individual-income-tax-expenditures-october-2018/t18-0211-tax-benefit-education">largely benefits middle- to high-income families</a>.
                 </p>
                 <p>
                   Among undergraduate students in 2016, 15 percent of White students <a href="https://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2018466">borrowed more than $26,500 for their education</a>, compared with 21 percent of Black students, and under 10 percent each for Hispanic and Asian students. However, Black and Hispanic families had a <a href="https://www.federalreserve.gov/econres/scfindex.htm">debt-to-assets ratio</a> two to three times higher than that of White families, potentially raising their costs for future borrowing and the probability of defaulting.
                 </p>
-                <!-- <img src="" alt=""> -->
+                <img src="img/student-loan-debt.jpg" alt=" ">
                 <p>
                   Black and Hispanic students have <a href="https://apps.urban.org/features/wealth-inequality-charts/">lower lifetime earnings and fewer family assets</a> to service their debt, and due to credit and labor market inequities, <a href="https://www.brookings.edu/research/black-white-disparity-in-student-loan-debt-more-than-triples-after-graduation/">student debt inequities by race actually rise post-graduation</a>. 
                 </p>
@@ -880,9 +958,9 @@
           </div>
           <span class="anchor" id="standard-and-itemized-deductions"> </span>
           <div class="card " >
-            <div class="card-header" id="standard-and-itemized-deductions-info" data-box="standard-and-itemized-deductions-boxes">
+            <div class="card-header" id="standard-and-itemized-deductions-info" data-box="standard-and-itemized-deductions-boxes" data-toggle="collapse" data-target="#standard-and-itemized-deductions-section" aria-expanded="false" aria-controls="standard-and-itemized-deductions-section">
               <a href="#standard-and-itemized-deductions"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#standard-and-itemized-deductions-section" aria-expanded="false" aria-controls="standard-and-itemized-deductions-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Standard and itemized deductions
                 </button>
               </h5></a>
@@ -890,13 +968,18 @@
             </div>
             <div id="standard-and-itemized-deductions-section" class="collapse" aria-labelledby="standard-and-itemized-deductions-info" data-box="standard-and-itemized-deductions-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#standard-and-itemized-deductions" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div> 
                 <p>
                   Taxpayers can either take the <a href="https://www.taxpolicycenter.org/briefing-book/what-standard-deduction">standard deduction</a> or claim <a href="https://www.taxpolicycenter.org/briefing-book/what-are-itemized-deductions-and-who-claims-them">itemized deductions</a> that are subtracted from their adjusted gross income to determine their taxable income. Itemized deductions include payments of state and local taxes, mortgage interest on owner-occupied residences, and charitable contributions. Most taxpayers, <a href="https://www.taxpolicycenter.org/statistics/deduction-type">almost 70 percent in 2017</a>, used the standard deduction. <a href="https://www.taxpolicycenter.org/briefing-book/how-did-tcja-change-standard-deduction-and-itemized-deductions">The 2017 tax law</a> almost doubled the standard deduction and temporarily restricted several itemized deductions through 2025; this is expected to reduce the number of itemizers by <a href="https://www.taxpolicycenter.org/model-estimates/impact-itemized-deductions-tax-cuts-and-jobs-act-jan-2018/t18-0001-impact-number">over half</a>.
                 </p>
                 <p>
                   High-income households are <a href="https://www.taxpolicycenter.org/model-estimates/impact-itemized-deductions-tax-cuts-and-jobs-act-jan-2018/t18-0002-impact-number">likelier to benefit from itemized deductions</a>. Black and Hispanic households are underrepresented among high-income households; in 2018, they comprised 27 percent of all households, but only 12 percent of households with income over $200,000. Low-income households, among which Black and Hispanic households are disproportionately represented, benefitted from the expansion of the standard deduction.
                 </p>
-                <!-- <img src="" alt=""> -->
+                <img src="img/standard-and-itemized-deductions.jpg" alt=" ">
                 <p>
                   While any <a href="https://www.taxpolicycenter.org/taxvox/anybody-can-itemize-their-deductions-most-dont-want">filer may choose to itemize</a>, benefits from itemizing go primarily to the top of the income distribution, both before and after the 2017 tax law. The top 1 percent of households by income, disproportionately less likely to be households of color, will receive over 40 percent of total benefits from itemizing in 2019, according to <a href="https://www.taxpolicycenter.org/publications/distributional-effects-individual-income-tax-expenditures-after-2017-tax-cuts-and-jobs">TPC estimates</a>. Altogether, adjusting for their interactivity, itemized deductions will cost the federal government <a href="https://www.taxpolicycenter.org/publications/distributional-effects-individual-income-tax-expenditures-after-2017-tax-cuts-and-jobs">$70 billion in 2019</a>.
                 </p>
@@ -908,9 +991,9 @@
           </div>
           <span class="anchor" id="state-and-local-taxes"> </span>
           <div class="card " >
-            <div class="card-header" id="state-and-local-taxes-info" data-box="state-and-local-taxes-boxes">
+            <div class="card-header" id="state-and-local-taxes-info" data-box="state-and-local-taxes-boxes" data-toggle="collapse" data-target="#state-and-local-taxes-section" aria-expanded="false" aria-controls="state-and-local-taxes-section">
               <a href="#state-and-local-taxes"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#state-and-local-taxes-section" aria-expanded="false" aria-controls="state-and-local-taxes-section">
+                <button class="btn btn-link collapsed" type="button" >
                   State and local taxes
                 </button>
               </h5></a>
@@ -918,13 +1001,18 @@
             </div>
             <div id="state-and-local-taxes-section" class="collapse" aria-labelledby="state-and-local-taxes-info" data-box="state-and-local-taxes-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#state-and-local-taxes" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div> 
                 <p>
                   Taxpayers are allowed to take an itemized deduction for state and local taxes paid on income, sales, real estate, and personal property through the <a href="https://www.taxpolicycenter.org/briefing-book/how-does-deduction-state-and-local-taxes-work">State and Local Tax (SALT) deduction</a>. The 2017 tax law instituted a temporary <a href="https://www.taxpolicycenter.org/briefing-book/how-does-deduction-state-and-local-taxes-work">$10,000 cap</a> on the annual deduction, and the number of claimants and average amount deducted are expected to fall. However, as is true of all itemized deductions, benefits primarily go to high-income households. TPC estimates that those with income over $100,000 accrued <a href="https://www.taxpolicycenter.org/model-estimates/individual-income-tax-expenditures-october-2018/t18-0162-tax-benefit-itemized">90 percent of total benefits</a> from the SALT deduction in 2018.
                 </p>
                 <p>
                   Black and Hispanic households comprised 27 percent of all households, but only 16 percent of those with income over $100,000. SALT deduction benefits vary not just by income, but also <a href="https://www.taxpolicycenter.org/statistics/state-and-local-tax-deduction-state">by state</a>; for example, the share of SALT deductions claimed by those with adjusted gross income over $100,000 ranged from <a href="https://www.irs.gov/statistics/soi-tax-stats-historic-table-2">70 percent in Texas</a> to <a href="https://www.irs.gov/statistics/soi-tax-stats-historic-table-2">85 percent in California</a>, with Black and Hispanic households less likely to be among the high-income households in those states.
                 </p>
-                <!-- <img src="" alt=""> -->
+                <img src="img/state-and-local-taxes.jpg" alt=" ">
                 <p>
                   The SALT deduction will cost the federal government around <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">$95 billion between 2019 and 2022</a>, dramatically less than projected prior to the 2017 tax law. Benefits from the current SALT deduction, and itemizing deductions in general, primarily accrue to <a href="https://www.taxpolicycenter.org/model-estimates/individual-income-tax-expenditures-october-2018/t18-0163-tax-benefit-itemized">higher-income households</a>, less likely to be Black and Hispanic households.
                 </p>
@@ -936,9 +1024,9 @@
           </div>
           <span class="anchor" id="housing-and-homeownership"> </span>
           <div class="card " >
-            <div class="card-header" id="housing-and-homeownership-info" data-box="housing-and-homeownership-boxes">
+            <div class="card-header" id="housing-and-homeownership-info" data-box="housing-and-homeownership-boxes" data-toggle="collapse" data-target="#housing-and-homeownership-section" aria-expanded="false" aria-controls="housing-and-homeownership-section">
               <a href="#housing-and-homeownership"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#housing-and-homeownership-section" aria-expanded="false" aria-controls="housing-and-homeownership-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Housing and home ownership
                 </button>
               </h5></a>
@@ -946,13 +1034,18 @@
             </div>
             <div id="housing-and-homeownership-section" class="collapse" aria-labelledby="housing-and-homeownership-info" data-box="housing-and-homeownership-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#state-and-local-taxes" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div> 
                 <p>
                   The federal income tax code subsidizes homeownership through <a href="https://www.taxpolicycenter.org/briefing-book/what-are-tax-benefits-homeownership">tax incentives</a> like the mortgage interest deduction, the deduction for state and local property taxes, and the exclusion of a portion of realized capital gains from the sale of a home. However, these provisions generally <a href="https://www.taxpolicycenter.org/briefing-book/do-existing-tax-incentives-increase-homeownership">have not increased homeownership rates</a>, instead making it likelier that taxpayers buy larger homes by taking on more debt. The 2017 tax law limited the tax benefits from the mortgage interest and property tax deductions by making itemizing less beneficial overall. However, this also means that <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">high-income households</a> who are still likely to itemize will have an increased share of the remaining benefits. Altogether, homeownership tax provisions will cost the federal government <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">more than $300 billion between 2019 and 2022</a>.
                 </p>
                 <p>
                   <a href="https://www.census.gov/housing/hvs/data/histtab16.xlsx">Homeownership rates for White households</a> were significantly higher than for people of color in 2018, and these disparities have remained fairly stable over time. Furthermore, <a href="https://www.census.gov/programs-surveys/ahs/data/2017/ahs-2017-summary-tables.html">monthly housing costs</a> comprised more than half of household income for higher shares of Black, Hispanic, and Asian households than for White households.            
                 </p>
-                <img src="img/housing-and-homeownership.svg" alt="">
+                <img src="img/housing-and-homeownership.jpg" alt=" ">
                 <p>
                   <a href="https://www.urban.org/urban-wire/homeownership-still-financially-better-renting">Homeownership</a> continues to be an important way to build wealth and financial mobility in the US, but households of color are significantly less likely to own their homes. For Black households, in particular, <a href="https://www.npr.org/2017/05/03/526655831/a-forgotten-history-of-how-the-u-s-government-segregated-america">the long history of redlining and segregation</a> in the United States have had a substantial impact on today's housing and wealth disparities.
                 </p>
@@ -964,9 +1057,9 @@
           </div>
           <span class="anchor" id="charitable-giving"> </span>
           <div class="card " >
-            <div class="card-header" id="charitable-giving-info" data-box="charitable-giving-boxes">
+            <div class="card-header" id="charitable-giving-info" data-box="charitable-giving-boxes" data-toggle="collapse" data-target="#charitable-giving-section" aria-expanded="false" aria-controls="charitable-giving-section">
               <a href="#charitable-giving"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#charitable-giving-section" aria-expanded="false" aria-controls="charitable-giving-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Charitable giving
                 </button>
               </h5></a>
@@ -974,13 +1067,18 @@
             </div>
             <div id="charitable-giving-section" class="collapse" aria-labelledby="charitable-giving-info" data-box="charitable-giving-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#charitable-giving" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div> 
                 <p>
                   The federal tax code <a href="https://www.taxpolicycenter.org/briefing-book/what-tax-treatment-charitable-contributions">subsidizes charitable givin</a> by allowing individual taxpayers to claim an itemized deduction for contributions of cash, financial assets, real estate, and property such as clothing to qualifying tax-exempt organizations. This tax incentive lowers the net cost of gifts and historically has subsidized about <a href="https://www.taxpolicycenter.org/briefing-book/how-large-are-individual-income-tax-incentives-charitable-giving">60 percent of total charitable giving</a>. But this itemized deduction does not benefit the vast majority of households taking the standard deduction. The <a href="https://www.taxpolicycenter.org/taxvox/21-million-taxpayers-will-stop-taking-charitable-deduction-under-tcja">2017 tax law</a> lowered the marginal tax benefit of charitable giving by reducing both the number of itemizers and income tax rates. However, this provision will still cost the federal government <a href="https://www.taxpolicycenter.org/publications/what-are-largest-nonbusiness-tax-expenditures">more than $170 billion between 2019 and 2022</a>.
                 </p>
                 <p>
                   Almost 60 percent of White and Asian households <a href="https://philanthropy.iupui.edu/institutes/womens-philanthropy-institute/research/women-give19.html">gave to formal charitable organizations in 2015</a>, compared with a third of Black and Hispanic households. As a share of income, <a href="https://www.urban.org/urban-wire/despite-racial-wealth-gap-black-philanthropy-strong">Black and White families gave more formal charitable donations than Hispanic families</a>.
                 </p>
-                <img src="img/charitable-giving.svg" alt="">
+                <img src="img/charitable-giving.jpg" alt=" ">
                 <p>
                   Over time, <a href="http://www.d5coalition.org/wp-content/uploads/2013/07/CultureofGiving.pdf">communities of color</a> are giving at increasing levels and shares of their income. TPC estimates that about <a href="https://www.taxpolicycenter.org/model-estimates/individual-income-tax-expenditures-october-2018/t18-0179-tax-benefit-itemized">92 percent of the total benefits</a> from the tax deduction for charitable contributions go to the top 20 percent of taxpayers by income, significantly less likely to be people of color.
                 </p>
@@ -992,9 +1090,9 @@
           </div>
           <span class="anchor" id="tax-burden"> </span>
           <div class="card " >
-            <div class="card-header" id="tax-burden-info" data-box="tax-burden-boxes">
+            <div class="card-header" id="tax-burden-info" data-box="tax-burden-boxes" data-toggle="collapse" data-target="#tax-burden-section" aria-expanded="false" aria-controls="tax-burden-section">
               <a href="#tax-burden"><h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#tax-burden-section" aria-expanded="false" aria-controls="tax-burden-section">
+                <button class="btn btn-link collapsed" type="button" >
                   Tax burden
                 </button>
               </h5></a>
@@ -1003,13 +1101,18 @@
 
             <div id="tax-burden-section" class="collapse" aria-labelledby="tax-burden-info" data-box="tax-burden-boxes" data-parent="#grouped-tax-fields-accordion">
               <div class="card-body">
+              <div class="share-links">
+                <a class="print-link" href="index.html?print=true#tax-burden" target="_blank"><span>PRINT </span></a> 
+                <a href="" class="social-link"><span>SHARE </span></a>
+              </div>
+              <div class="clear"></div> 
                 <p>
                   The amount taxpayers owe is determined by their income, filing status, and eligible credits and deductions. The <a href="https://www.taxpolicycenter.org/feature/analysis-tax-cuts-and-jobs-act">2017 tax law</a> significantly changed the income tax system by lowering marginal individual income tax rates, expanding the standard deduction, eliminating the personal exemption, increasing the child tax credit,  and introducing a deduction for some pass-through income. Most of the individual income tax changes are temporary and set to expire in 2025. TPC estimates that about <a href="https://www.taxpolicycenter.org/publications/effect-tcja-individual-income-tax-provisions-across-income-groups-and-across-states">80 percent of taxpayers</a> got a tax cut in 2018, while about 5 percent saw a tax increase.
                 </p>
                 <p>
                   The top 20 percent of taxpayers by income (or those with over $149,400) accrued 65 percent of total benefits in 2018 from the <a href="https://www.taxpolicycenter.org/model-estimates/conference-agreement-tax-cuts-and-jobs-act-dec-2017/t17-0312-conference-agreement">2017 tax law changes</a>. Black and Hispanic households comprise only 14 percent of households with over $150,000 but make up 27 percent of all households.
                 </p>
-                <img src="img/tax-burden.svg" alt="">
+                <img src="img/tax-burden.jpg" alt=" ">
                 <p>
                   Overall, federal income taxes are <a href="https://www.taxpolicycenter.org/briefing-book/are-federal-taxes-progressive">progressive</a>, meaning that average income tax burden tends to increase with income. Therefore, federal income taxes help <a href="https://www.taxpolicycenter.org/briefing-book/how-do-taxes-affect-income-inequality">reduce income inequality</a> and racial income gaps.
                 </p>
@@ -1024,8 +1127,7 @@
        <div class="clear"></div>
       </div><!--end container -->
       <footer>
-      <div class="content"> 
-        <span class="alert">#WIP</span>    
+      <div class="content">     
         <h3>About the data</h3>
           <p>
             This feature highlights how certain individual income tax provisions interact with racial disparities by describing various tax provisions and presenting data on related demographic and economic factors. The data on related factors is sourced from public survey datasets, primarily from the Annual Social and Economic Supplements of the Current Population Survey (CPS) by the US Census Bureau and the Survey of Consumer Finances (SCF) by the Federal Reserve Board and estimates of provision costs and distributional effects from the Tax Policy Center’s Microsimulation model of the Federal Tax System. Other data sources include the US Census Bureau's American Community Survey, Annual Estimates of the Resident Population, Annual Survey of Entrepreneurs, and Housing Vacancy Survey, the US Department of Education's Integrated Postsecondary Education Data System and National Postsecondary Student Aid Study, the US Department of Health and Human Services' National Vital Statistics Reports and Profile of Older Americans, the US Department of Housing and Urban Development's Annual Homeless Assessment Report, Indiana University’s Philanthropy Panel Study, and the Pew Research Center's immigrant population estimates. Definitions and descriptions of most provisions are sourced from the Tax Policy Center (TPC)'s Briefing Book, while the distributional estimates by income are sourced from TPC's microsimulation model estimates. Estimates of forgone revenue are based on TPC's analysis of tax expenditures data from the Joint Committee on Taxation and the Treasury.

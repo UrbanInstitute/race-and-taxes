@@ -9,10 +9,13 @@ body {
 $spacing-unit: 60px;
 
 $tpc-sans-serif-roman: "Avenir LT W01_55 Roman1475520", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 $tpc-sans-serif-roman-oblique: "Avenir LT W01_55 Obliqu1475526", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 $tpc-sans-serif-black: "Avenir LT W01_95 Black1475556", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$tpc-medium-blue: #008BB0;
+$tpc-dark-blue: #174A7C; 
+$tpc-gray: #bcbec0;
+$tpc-poppy: #F0573E;
 
 /******************************************
 * PAGE LAYOUT
@@ -20,6 +23,38 @@ $tpc-sans-serif-black: "Avenir LT W01_95 Black1475556", "Helvetica Neue", Helvet
 
 body {
   font-family: $tpc-sans-serif-roman;
+}
+
+a {
+  color: $tpc-dark-blue;
+  text-decoration: underline;
+}
+
+
+
+a:hover {
+  color: $tpc-poppy;
+}
+
+.accordion a.print-link, .accordion a.social-link {
+  text-decoration: none;
+}
+
+a.print-link:hover, a.social-link:hover {
+  color: $tpc-poppy;
+}
+
+.share-links {
+  color: $tpc-dark-blue;
+  float: right;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.social-link {
+  font-family: $tpc-sans-serif-black;
+  margin-left: 1rem;
+  text-decoration: none;
 }
 
 .clear {
@@ -36,18 +71,15 @@ body {
   width: 48%;
 }
 
+#print-logo {
+  display: none;
+}
+
 #grouped-tax-fields-accordion {
   width: 48%;
   float: right;
 }
 
-.alert {
-  border: 1px solid #5DFF6C;
-  color: #FC10E0;
-  font-family: $tpc-sans-serif-black;
-  padding: 10px 40%;
-  text-transform: uppercase;
-}
 
 /******************************************
 * HEADER
@@ -179,7 +211,7 @@ body {
 }
 
 #header-pinned .site-logo {
-    background: url(/img/tpcLogo.png) no-repeat;
+    background: url(../img/tpcLogo.png) no-repeat;
     background-size: 44px 37px;
     display: block;
     height: 37px;
@@ -333,13 +365,14 @@ div.card-header {
 
 .accordion img {
   margin-bottom: 1rem;
+  padding-left: 0.75rem;
   width: 100%;
 }
 
 .arrow-down {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 7px solid #000000;
+  border-top: 7px solid $tpc-dark-blue;
   float: right;
   height: 0;
   margin-top: 20px;
@@ -351,12 +384,21 @@ div.card-header {
 .btn-link {
   font-size: 18px;
   font-family: $tpc-sans-serif-black;
-  color: #000000;
+  color: $tpc-dark-blue;
   text-decoration: none;
 }
 
 .card {
   border-radius: 0;
+}
+
+.card .btn-link:hover {
+  color: $tpc-poppy;
+  text-decoration: none;
+}
+
+.card a.print-link:hover {
+  color: $tpc-poppy;
 }
 
 .card-body p {
@@ -414,6 +456,133 @@ svg {
     opacity: 1;
   }
 }
+
+/******************************************
+* PRINT
+*******************************************/
+
+body.print {
+  visibility: hidden;
+  width: 220mm;
+
+    a {
+      color: inherit;
+      cursor: default;
+      pointer-events: none;
+      text-decoration: none;
+    }
+
+    div.card-header {
+      display: none;
+    }
+
+    div.card-header.active-click {
+      border-bottom: none;
+      background-color: transparent !important;
+      display: block;
+      padding: 0;
+      visibility: visible;
+    }
+
+    div.collapse.show {
+      visibility: visible;
+    }
+
+    div#grouped-tax-fields-accordion {
+      width: 100%;
+    }
+
+    div#intro {
+      margin-bottom: 0;
+      visibility: visible;
+      width: 100%;
+    }
+
+    div.title-content {
+      margin-bottom: 8mm;
+      margin-top: 6mm !important;
+      text-align: left;
+      visibility: visible;
+    }
+
+    footer {
+      background-color: transparent;
+      margin-top: 0;
+      visibility: visible;
+
+    }
+
+    footer .content {
+      margin: 0;
+      max-width: 100%;
+    }
+
+    h1 {
+      font-size: 24pt;
+      margin-bottom: 0;
+    }
+
+    .arrow-down {
+      display: none;
+    }
+
+    .btn {
+      font-family: "Avenir LT W01_55 Roman1475520";
+      font-size: 18pt;
+      padding-left: 0;
+    }
+
+    .btn:before {
+      content: '1040 Topic: ';
+    }
+
+    .card-body {
+      padding: 0;
+    }
+
+    .card-body p {
+      padding: 0;
+    }
+
+    .card-body img {
+      margin-left: 12.5%;
+      width: 75%;
+    }
+
+    .container {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    #form-illo {
+      display: none;  
+    }
+
+    #print-header {
+      display: inline-block;
+      margin-bottom: 5mm;
+      visibility: visible;
+    }
+
+    #print-header img {
+      display: inline-block;
+      visibility: visible;
+      width: 80mm;
+    }
+
+    #print-header #org-description {
+      color: #5c5859;
+      font-family: $tpc-sans-serif-roman;
+      font-size: 9pt;
+      letter-spacing: 1pt;
+    }
+
+    .share-links, .print-link {
+      display: none;
+    }
+} 
+  
 
 /* Illustrator-assigned styles. Some names changed, remaining 'st' classes are for text (?) */
 
