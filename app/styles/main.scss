@@ -30,8 +30,6 @@ a {
   text-decoration: underline;
 }
 
-
-
 a:hover {
   color: $tpc-poppy;
 }
@@ -69,6 +67,14 @@ a.print-link:hover, a.social-link:hover {
   border: 1px solid #E2E2E2;
   float: left;
   width: 48%;
+}
+
+#form-illo a {
+  text-decoration: none;
+}
+
+#mobile-hed-img {
+  display: none;
 }
 
 #print-logo {
@@ -249,7 +255,7 @@ a.print-link:hover, a.social-link:hover {
 
 .title-content {
   text-align: center;
-  margin-bottom: $spacing-unit;
+  margin-bottom: 0.5* $spacing-unit;
 }
 
 #intro {
@@ -518,6 +524,7 @@ body.print {
     }
 
     h1 {
+      font-family: "Avenir LT W01_95 Black1475556";
       font-size: 24pt;
       margin-bottom: 0;
     }
@@ -673,6 +680,16 @@ body.print {
   #grouped-tax-fields-accordion {
     width: 100%;
 
+  }
+
+  #mobile-hed-img {
+    display: block;
+    margin-bottom: 0.5* $spacing-unit;
+  }
+
+  #mobile-hed-img img {
+    
+    max-width: 70%;
   }
 }
 

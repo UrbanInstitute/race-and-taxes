@@ -95,7 +95,7 @@ $(document).ready(function() {
     var lineItemG = sectionID + '-boxes',
         cardHeader = sectionID + '-info';
 
-    $(lineItemG).children().children().toggleClass('active-hover');
+    $(lineItemG + '> a > rect').toggleClass('active-hover');
     $('div.card-header').removeClass('active-hover');
     $(cardHeader).addClass('active-hover');
   };
@@ -112,13 +112,13 @@ $(document).ready(function() {
   });
 
   //highlight form box on mouseover and highlight corresponding drawer
-  $('g#line-items > g > g').mouseenter(function(){
-    var lineItem = '#' + $(this.parentElement).attr('id').replace('-boxes', '');
+  $('g.form-link').mouseenter(function(){
+    var lineItem = '#' + $(this).attr('id').replace('-boxes', '');
     mouseoverHilite(lineItem);
   });
 
-  $('g#line-items > g > g').mouseleave(function(){
-    var lineItem = '#' + $(this.parentElement).attr('id').replace('-boxes', ''),
+  $('g.form-link').mouseleave(function(){
+    var lineItem = '#' + $(this).attr('id').replace('-boxes', ''),
       cardHeader = lineItem + '-info';
     mouseoverHilite(lineItem);
     $(cardHeader).removeClass('active-hover');
@@ -126,15 +126,15 @@ $(document).ready(function() {
 
   //underline the text on mouseover
   //note: .st4 = bold text, .st6 = light text
-  $('g#line-items > g > g > text').mouseenter(function() {
-    var formCat = $(this.parentElement.parentElement).attr('id');
-    $('#' + formCat + '> g').css('text-decoration', 'underline')
-  });
+  // $('g.form-link').mouseenter(function() {
+  //   var formCat = $(this.parentElement.parentElement).attr('id');
+  //   $('#' + formCat + '> g').css('text-decoration', 'underline')
+  // });
 
-  $('g#line-items > g > g > text').mouseleave(function() {
-    var formCat = $(this.parentElement.parentElement).attr('id');
-    $('#' + formCat + '> g').css('text-decoration', 'none')
-  });
+  // $('g.form-link').mouseleave(function() {
+  //   var formCat = $(this.parentElement.parentElement).attr('id');
+  //   $('#' + formCat + '> g').css('text-decoration', 'none')
+  // });
 
 
   //*********CLICK ********//
@@ -157,7 +157,7 @@ $(document).ready(function() {
     //rotate any turned arrow back to original down position
     $('div.card-header > span' ).removeClass('rotate-arrow-to-up');
     //deselect boxes on form
-    $('g#line-items > g > g').children().removeClass('active-click');
+    $('g.form-link > a > rect').removeClass('active-click');
 
     if (drawerOpen){
       $('div.card-header').removeClass('active-click');
