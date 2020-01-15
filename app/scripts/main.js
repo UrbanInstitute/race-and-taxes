@@ -16,10 +16,10 @@ $(document).ready(function() {
   //now mess with URL
   function parseQueryString(query) {
           var obj = {},
-              qPos = query.indexOf("?"),
+              qPos = query.indexOf('?'),
         tokens = query.substr(qPos + 1).split('&'),
         i = tokens.length - 1;
-    if (qPos !== -1 || query.indexOf("=") !== -1) {
+    if (qPos !== -1 || query.indexOf('=') !== -1) {
       for (; i >= 0; i--) {
         var s = tokens[i].split('=');
         obj[unescape(s[0])] = s.hasOwnProperty(1) ? unescape(s[1]) : null;
