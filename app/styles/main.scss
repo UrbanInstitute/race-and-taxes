@@ -361,6 +361,7 @@ h5 {
   display: none !important;
 }
 
+
 div.card-header.active-click {
   background-color: #EFEFEF !important;
 }
@@ -603,27 +604,27 @@ body.print {
 }
 
 .form-1040-box {
-  fill:#174A7C;
+  fill: $tpc-dark-blue;
 }
 
 .sched-3-box {
-  fill: #75ADC0;
+  fill: $tpc-medium-blue;
 }
 
 .sched-1-box {
-  fill: #008BB0;
+  fill: $tpc-medium-blue;
 }
 
 .sched-C-box {
-  fill: #3F4F56;
+  fill: $tpc-medium-blue;
 }
 
 .sched-E-box {
-  fill: #BCBEC0;
+  fill: $tpc-medium-blue;
 }
 
 .sched-A-box {
-  fill: #B0D0DB;
+  fill: $tpc-medium-blue;
 }
 
 
@@ -631,12 +632,17 @@ body.print {
 
 .st4 {
   font-family: $tpc-sans-serif-black;
+  fill:#353535;
 }
 
-.st5{font-size:14px;}
+.st5{
+  font-size:14px;
+  fill:#FFFFFF;
+}
 
 .st6 {
   font-weight: 400;
+  fill:#FFFFFF;
 }
 
 .st7{fill:#353535;}

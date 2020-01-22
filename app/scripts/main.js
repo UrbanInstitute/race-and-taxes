@@ -140,6 +140,8 @@ $(document).ready(function() {
   //*********CLICK ********//
   function clickHilite(sectionID){
     
+    console.log()
+
     var lineItemG = sectionID + '-boxes',
       cardHeader = sectionID + '-info',
       section = sectionID + '-section',
@@ -161,6 +163,8 @@ $(document).ready(function() {
 
     if (drawerOpen){
       $('div.card-header').removeClass('active-click');
+
+      
 
       history.pushState('', document.title, window.location.pathname + window.location.search);
 
