@@ -16,9 +16,6 @@
 
 $(document).ready(function() {
 
-
-
-
   var spacingUnit = 60,
       headerHeight = $('#header-pinned').outerHeight();
   $('div.title-content').css('margin-top', headerHeight + spacingUnit);
@@ -156,8 +153,6 @@ $(document).ready(function() {
 
   //*********CLICK ********//
   function clickHilite(sectionID){
-    
-    console.log()
 
     var lineItemG = sectionID + '-boxes',
       cardHeader = sectionID + '-info',
@@ -184,10 +179,12 @@ $(document).ready(function() {
     // $('div.card-header > a > h5 > button').removeClass('click-button-text');
 
     if (drawerOpen){
+
       $('div.card-header').removeClass('active-click');
+      $('g.form-link > a > rect').removeClass('super-not-selected');
       history.pushState('', document.title, window.location.pathname + window.location.search);
-       $('g.form-link > a > rect').removeClass('super-not-selected');
     } else {
+
       $(lineItemG).children().children().addClass('active-click');
       $(lineItemG).children().children().addClass('super-not-selected');
       $(cardHeader + ' > span' ).addClass('rotate-arrow-to-up');
