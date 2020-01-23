@@ -6,9 +6,19 @@
 // svgs - need to use "object", I think. Change font definitions in each one.
 //create resize event and set the form-illo's height again
 
-
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.style.display == 'inline-block')
+        e.style.display = 'none';
+    else
+        e.style.display = 'inline-block';
+  }
 
 $(document).ready(function() {
+
+
+
+
   var spacingUnit = 60,
       headerHeight = $('#header-pinned').outerHeight();
   $('div.title-content').css('margin-top', headerHeight + spacingUnit);
@@ -95,9 +105,10 @@ $(document).ready(function() {
     var lineItemG = sectionID + '-boxes',
         cardHeader = sectionID + '-info';
 
-    $(lineItemG + '> a > rect').toggleClass('active-hover');
-    $('div.card-header').removeClass('active-hover');
-    $(cardHeader).addClass('active-hover');
+    $(lineItemG + '> a > rect').toggleClass('active-hover');   
+    $(cardHeader).toggleClass('active-hover');
+    // $(cardHeader + '> span.arrow-down').toggleClass('hover-arrow');
+    // $(cardHeader + '> a > h5 > button').toggleClass('hover-button-text');
   };
 
   $('.card-header').mouseenter(function(){
@@ -109,6 +120,9 @@ $(document).ready(function() {
     var lineItem = '#' + this.getAttribute('data-box').replace('-boxes','');
     mouseoverHilite(lineItem);
     $(this).removeClass('active-hover');
+
+    // $('div.card-header > span.arrow-down').removeClass('hover-arrow');
+    // $('div.card-header > a > h5 > button').removeClass('hover-button-text');
   });
 
   //highlight form box on mouseover and highlight corresponding drawer
@@ -122,6 +136,9 @@ $(document).ready(function() {
       cardHeader = lineItem + '-info';
     mouseoverHilite(lineItem);
     $(cardHeader).removeClass('active-hover');
+
+    // $('div.card-header > span.arrow-down').removeClass('hover-arrow');
+    // $('div.card-header > a > h5 > button').removeClass('hover-button-text');
   });
 
   //underline the text on mouseover
@@ -160,17 +177,23 @@ $(document).ready(function() {
     $('div.card-header > span' ).removeClass('rotate-arrow-to-up');
     //deselect boxes on form
     $('g.form-link > a > rect').removeClass('active-click');
+    $('g.form-link > a > rect').addClass('super-not-selected');
+    
+    //take off active class from button/header text and arrow
+    $('div.card-header > span').removeClass('click-arrow');
+    // $('div.card-header > a > h5 > button').removeClass('click-button-text');
 
     if (drawerOpen){
       $('div.card-header').removeClass('active-click');
-
-      
-
       history.pushState('', document.title, window.location.pathname + window.location.search);
-
+       $('g.form-link > a > rect').removeClass('super-not-selected');
     } else {
       $(lineItemG).children().children().addClass('active-click');
+      $(lineItemG).children().children().addClass('super-not-selected');
       $(cardHeader + ' > span' ).addClass('rotate-arrow-to-up');
+      // $(cardHeader + '> span').addClass('click-arrow');
+      // $('div.card-header > a > h5 > button').removeClass('click-button-text');
+      // $(cardHeader + '> a > h5 > button').addClass('click-button-text');
       history.pushState('', '', sectionID)
     }
 
