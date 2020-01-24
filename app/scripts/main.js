@@ -1,24 +1,45 @@
-//TODO
-// print styles
-// social intents
-// links for both
 
-// svgs - need to use "object", I think. Change font definitions in each one.
-//create resize event and set the form-illo's height again
 
-  function toggle_visibility(id) {
-    var e = document.getElementById(id);
-    if (e.style.display == 'inline-block')
-        e.style.display = 'none';
-    else
-        e.style.display = 'inline-block';
-  }
+function toggle_visibility(id) {
+  var e = document.getElementById(id);
+  if (e.style.display == 'inline-block')
+      e.style.display = 'none';
+  else
+      e.style.display = 'inline-block';
+}
 
 $(document).ready(function() {
 
   var spacingUnit = 60,
       headerHeight = $('#header-pinned').outerHeight();
   $('div.title-content').css('margin-top', headerHeight + spacingUnit);
+
+    //h/t: https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
+  var isAboveViewport = function(element){
+    var bounding = element.getBoundingClientRect(); 
+      return bounding.top <= 0 
+  }
+
+  var isBelowViewPort = function(element){
+    var bounding = element.getBoundingClientRect(); 
+      return bounding.bottom >= (window.innerHeight || document.documentElement.clientHeight)
+  }
+
+  function isWayfindingNeeded(lineItemGs){
+    var els = $(lineItemGs);
+
+    for (var i = 0; i < els.length; i++){
+      if (isAboveViewport(els[i])){
+        $('#up-arrow-wayfinder').css('opacity', 0.7)
+      } else if (isBelowViewPort(els[i])){
+        $('#down-arrow-wayfinder').css('opacity', 0.7)
+      }
+    }
+
+    window.setTimeout(function(){
+      $('#down-arrow-wayfinder, #up-arrow-wayfinder').css('opacity', 0)
+    }, 2000)
+  }
 
   //now mess with URL
   function parseQueryString(query) {
@@ -47,6 +68,7 @@ $(document).ready(function() {
     $(box).children().children().addClass('active-click');
     $(divHeader).toggleClass('active-click');
     $(divHeader + ' > span' ).addClass('rotate-arrow-to-up');
+    isWayfindingNeeded(box);
   }
 
   var parameters = parseQueryString(window.location.search);
@@ -54,7 +76,6 @@ $(document).ready(function() {
   if(parameters.hasOwnProperty('print')){
     $('body').addClass('print');
   }
-
 
   //fix svg container div height for IE
   var illoWidth = $('#form-illo > svg').width(),
@@ -92,10 +113,7 @@ $(document).ready(function() {
         }
         window.scrollTo(newX, newY);
     }, 1000 / 60); // 60 fps
-
   };
-
-
 
   //*********MOUSEOVER **********//
   function mouseoverHilite(sectionID){
@@ -104,8 +122,6 @@ $(document).ready(function() {
 
     $(lineItemG + '> a > rect').toggleClass('active-hover');   
     $(cardHeader).toggleClass('active-hover');
-    // $(cardHeader + '> span.arrow-down').toggleClass('hover-arrow');
-    // $(cardHeader + '> a > h5 > button').toggleClass('hover-button-text');
   };
 
   $('.card-header').mouseenter(function(){
@@ -117,9 +133,6 @@ $(document).ready(function() {
     var lineItem = '#' + this.getAttribute('data-box').replace('-boxes','');
     mouseoverHilite(lineItem);
     $(this).removeClass('active-hover');
-
-    // $('div.card-header > span.arrow-down').removeClass('hover-arrow');
-    // $('div.card-header > a > h5 > button').removeClass('hover-button-text');
   });
 
   //highlight form box on mouseover and highlight corresponding drawer
@@ -133,23 +146,7 @@ $(document).ready(function() {
       cardHeader = lineItem + '-info';
     mouseoverHilite(lineItem);
     $(cardHeader).removeClass('active-hover');
-
-    // $('div.card-header > span.arrow-down').removeClass('hover-arrow');
-    // $('div.card-header > a > h5 > button').removeClass('hover-button-text');
   });
-
-  //underline the text on mouseover
-  //note: .st4 = bold text, .st6 = light text
-  // $('g.form-link').mouseenter(function() {
-  //   var formCat = $(this.parentElement.parentElement).attr('id');
-  //   $('#' + formCat + '> g').css('text-decoration', 'underline')
-  // });
-
-  // $('g.form-link').mouseleave(function() {
-  //   var formCat = $(this.parentElement.parentElement).attr('id');
-  //   $('#' + formCat + '> g').css('text-decoration', 'none')
-  // });
-
 
   //*********CLICK ********//
   function clickHilite(sectionID){
@@ -167,36 +164,29 @@ $(document).ready(function() {
     //deselect all card-headers & hilite selected
     $('div.card-header').removeClass('active-click');
     $(cardHeader).addClass('active-click');
-
     //rotate any turned arrow back to original down position
     $('div.card-header > span' ).removeClass('rotate-arrow-to-up');
     //deselect boxes on form
     $('g.form-link > a > rect').removeClass('active-click');
     $('g.form-link > a > rect').addClass('super-not-selected');
-    
     //take off active class from button/header text and arrow
     $('div.card-header > span').removeClass('click-arrow');
-    // $('div.card-header > a > h5 > button').removeClass('click-button-text');
 
     if (drawerOpen){
-
       $('div.card-header').removeClass('active-click');
       $('g.form-link > a > rect').removeClass('super-not-selected');
       history.pushState('', document.title, window.location.pathname + window.location.search);
     } else {
-
       $(lineItemG).children().children().addClass('active-click');
       $(lineItemG).children().children().addClass('super-not-selected');
       $(cardHeader + ' > span' ).addClass('rotate-arrow-to-up');
-      // $(cardHeader + '> span').addClass('click-arrow');
-      // $('div.card-header > a > h5 > button').removeClass('click-button-text');
-      // $(cardHeader + '> a > h5 > button').addClass('click-button-text');
       history.pushState('', '', sectionID)
     }
 
     $(section).on('shown.bs.collapse', function(){
       let pos = document.querySelector(sectionID).offsetTop;
       smoothScrollTo(0, pos, 500); 
+      isWayfindingNeeded(lineItemG);
     })
   }
 
@@ -211,7 +201,6 @@ $(document).ready(function() {
     var formCat = '#' + this.getAttribute('data-target').replace('-section', '')
     clickHilite(formCat);
   });
-
 
 });
 

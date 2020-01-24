@@ -494,6 +494,10 @@ div.card-header {
   text-decoration: none !important;
 }
 
+.btn-link:hover {
+  color: $tpc-dark-blue;
+}
+
 .card {
   border-radius: 0;
 }
@@ -569,6 +573,24 @@ svg {
     opacity: 1;
   }
 }
+
+#down-arrow-wayfinder, #up-arrow-wayfinder {
+  left: 25%;
+  opacity: 0;
+  position: fixed;
+  transition: opacity 0s linear 300ms;
+  width: 3rem;
+}
+
+#up-arrow-wayfinder {
+  top: 80px;
+}
+
+#down-arrow-wayfinder {
+  bottom: 20px;
+}
+
+
 
 /******************************************
 * PRINT
