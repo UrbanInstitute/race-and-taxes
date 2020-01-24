@@ -8,6 +8,7 @@ body {
 
 $spacing-unit: 50px;
 
+$tpc-sans-book: "Avenir LT W01_45 Book1475508", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $tpc-sans-serif-roman: "Avenir LT W01_55 Roman1475520", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $tpc-sans-serif-roman-oblique: "Avenir LT W01_55 Obliqu1475526", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $tpc-sans-serif-heavy: "Avenir LT W01_85 Heavy1475544", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -435,7 +436,6 @@ h5 {
   display: none !important;
 }
 
-
 div.card-header.active-click {
   background-color: #EFEFEF !important;
 }
@@ -513,10 +513,17 @@ div.card-header {
   /*padding: 0.25rem 0.75rem;*/
 }
 
+.card-body p.form-reference {
+  padding-left: 15px;
+}
+
 .form-reference {
-  color: #8E8E8E;
-  font-size: 14px;
+  border-left: 5px solid #99d1df;
+  font-family: $tpc-sans-book;
+  color: #a8a8a8;
+  font-size: 16px;
   font-style: italic;
+  margin-left: 5px;
 }
 
 .rotate-arrow-to-up {
@@ -587,6 +594,7 @@ body.print {
       background-color: transparent !important;
       display: block;
       padding: 0;
+      pointer-events: none;
       visibility: visible;
     }
 
