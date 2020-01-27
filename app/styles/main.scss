@@ -51,6 +51,14 @@ a.print-link:hover, a.social-link:hover {
   padding-bottom: 1rem;
 }
 
+a.social-link {
+  cursor: pointer;
+}
+
+.social-link > span:hover {
+  color: $tpc-poppy;
+}
+
 .social-link {
   font-family: $tpc-sans-serif-black;
   margin-left: 1rem;
@@ -351,7 +359,7 @@ footer {
     background-color: #f1f2f2;
     margin-top: $spacing-unit + 20;
     padding-top: 50px;
-    padding-bottom: 25px;
+    padding-bottom: 120px;
     bottom: 0;
    overflow: hidden;
      height:auto;
@@ -447,6 +455,17 @@ div.card-header.active-hover {
 
 div.card-header {
   position: relative;
+}
+
+p.copy-alert {
+  background-color: white;
+  border: 1px solid #F0573E;
+  border-radius: 2px;
+  margin-left: 42px;
+  opacity: 0.8;
+  padding: 5px !important;
+  position: absolute;
+  z-index: 10;
 }
 
 .click-arrow {
@@ -619,11 +638,14 @@ body.print {
     div.card-header.active-click {
       border-bottom: none;
       background-color: transparent !important;
-      color: #000000;
       display: block;
       padding: 0;
       pointer-events: none;
       visibility: visible;
+    }
+
+    div.card-header.active-click > a > h5 > button {
+      color: #000000;
     }
 
     div.collapse.show {
@@ -663,6 +685,11 @@ body.print {
       font-family: "Avenir LT W01_95 Black1475556";
       font-size: 24pt;
       margin-bottom: 0;
+    }
+
+    p.form-reference {
+      border-left: none;
+      margin-left: 0;
     }
 
     .arrow-down {

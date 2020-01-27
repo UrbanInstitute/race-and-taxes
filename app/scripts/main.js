@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     window.setTimeout(function(){
       $('#down-arrow-wayfinder.transition-w, #up-arrow-wayfinder.transition-w').toggleClass('transition-w');
-    }, 1250)
+    }, 2000)
   }
 
   //now mess with URL
@@ -186,10 +186,11 @@ $(document).ready(function() {
     $(section).on('shown.bs.collapse', function(){
       let pos = document.querySelector(sectionID).offsetTop;
       smoothScrollTo(0, pos, 500); 
-      window.setTimeout(function(){
-        isWayfindingNeeded(lineItemG);
-      }, 200)
     })
+
+    window.setTimeout(function(){
+      isWayfindingNeeded(lineItemG);
+    }, 400)
   }
 
   $('.card-header').on('click', function(event){
@@ -203,6 +204,46 @@ $(document).ready(function() {
     var formCat = '#' + this.getAttribute('data-target').replace('-section', '')
     clickHilite(formCat);
   });
+
+  //clipboard functions from https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+  function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement('textarea');
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Fallback: Copying text command was ' + msg);
+    } catch (err) {
+      console.error('Fallback: Oops, unable to copy', err);
+    }
+
+    document.body.removeChild(textArea);
+  }
+  function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(text);
+      return;
+    }
+    navigator.clipboard.writeText(text).then(function() {
+      console.log('Async: Copying to clipboard was successful!');
+    }, function(err) {
+      console.error('Async: Could not copy text: ', err);
+    });
+  }
+
+  $('.social-link').on('click', function(event){
+    event.stopPropagation();
+    $(this.parentElement).append('<p class="copy-alert">Link copied!</p>');
+    var link = window.location.href;
+    copyTextToClipboard(link);
+    window.setTimeout(function(){
+      $('.copy-alert').remove();
+    }, 1000)
+  })
 
 });
 
