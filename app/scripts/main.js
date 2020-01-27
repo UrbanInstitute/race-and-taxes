@@ -186,7 +186,9 @@ $(document).ready(function() {
     $(section).on('shown.bs.collapse', function(){
       let pos = document.querySelector(sectionID).offsetTop;
       smoothScrollTo(0, pos, 500); 
-      isWayfindingNeeded(lineItemG);
+      window.setTimeout(function(){
+        isWayfindingNeeded(lineItemG);
+      }, 200)
     })
   }
 
