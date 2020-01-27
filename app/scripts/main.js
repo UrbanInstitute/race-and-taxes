@@ -30,15 +30,15 @@ $(document).ready(function() {
 
     for (var i = 0; i < els.length; i++){
       if (isAboveViewport(els[i])){
-        $('#up-arrow-wayfinder').css('opacity', 0.7)
+        $('#up-arrow-wayfinder').toggleClass('transition-w');
       } else if (isBelowViewPort(els[i])){
-        $('#down-arrow-wayfinder').css('opacity', 0.7)
+        $('#down-arrow-wayfinder').toggleClass('transition-w');
       }
     }
 
     window.setTimeout(function(){
-      $('#down-arrow-wayfinder, #up-arrow-wayfinder').css('opacity', 0)
-    }, 2000)
+      $('#down-arrow-wayfinder.transition-w, #up-arrow-wayfinder.transition-w').toggleClass('transition-w');
+    }, 1250)
   }
 
   //now mess with URL
