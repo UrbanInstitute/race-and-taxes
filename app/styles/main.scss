@@ -36,11 +36,11 @@ a:hover {
   color: $tpc-poppy;
 }
 
-.accordion a.print-link, .accordion a.social-link {
+a.print-link {
   text-decoration: none;
 }
 
-a.print-link:hover, a.social-link:hover {
+a.print-link:hover, span.social-link:hover {
   color: $tpc-poppy;
 }
 
@@ -51,8 +51,12 @@ a.print-link:hover, a.social-link:hover {
   padding-bottom: 1rem;
 }
 
-a.social-link {
+span.social-link {
   cursor: pointer;
+}
+
+textarea {
+  display: none;
 }
 
 .social-link > span:hover {

@@ -68,7 +68,8 @@ $(document).ready(function() {
     $(box).children().children().addClass('active-click');
     $(divHeader).toggleClass('active-click');
     $(divHeader + ' > span' ).addClass('rotate-arrow-to-up');
-    isWayfindingNeeded(box);
+
+ //   isWayfindingNeeded(box);
   }
 
   var parameters = parseQueryString(window.location.search);
@@ -181,16 +182,15 @@ $(document).ready(function() {
       $(lineItemG).children().children().addClass('super-not-selected');
       $(cardHeader + ' > span' ).addClass('rotate-arrow-to-up');
       history.pushState('', '', sectionID)
+          window.setTimeout(function(){
+      isWayfindingNeeded(lineItemG);
+    }, 400)
     }
 
     $(section).on('shown.bs.collapse', function(){
       let pos = document.querySelector(sectionID).offsetTop;
       smoothScrollTo(0, pos, 500); 
     })
-
-    window.setTimeout(function(){
-      isWayfindingNeeded(lineItemG);
-    }, 400)
   }
 
   $('.card-header').on('click', function(event){
@@ -211,7 +211,7 @@ $(document).ready(function() {
     textArea.value = text;
     document.body.appendChild(textArea);
     textArea.focus();
-    textArea.select();
+ //   textArea.select();
 
     try {
       var successful = document.execCommand('copy');
@@ -223,6 +223,7 @@ $(document).ready(function() {
 
     document.body.removeChild(textArea);
   }
+
   function copyTextToClipboard(text) {
     if (!navigator.clipboard) {
       fallbackCopyTextToClipboard(text);
@@ -237,6 +238,7 @@ $(document).ready(function() {
 
   $('.social-link').on('click', function(event){
     event.stopPropagation();
+    event.preventDefault();
     $(this.parentElement).append('<p class="copy-alert">Link copied!</p>');
     var link = window.location.href;
     copyTextToClipboard(link);
