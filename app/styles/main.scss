@@ -458,14 +458,39 @@ div.card-header {
 }
 
 p.copy-alert {
-  background-color: white;
+  background-color: #FFFFFF;
   border: 1px solid #F0573E;
   border-radius: 2px;
   margin-left: 42px;
+  margin-top: 4px;
   opacity: 0.8;
   padding: 5px !important;
   position: absolute;
   z-index: 10;
+}
+
+p.copy-alert:after, p.copy-alert:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+p.copy-alert:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #FFFFFF;
+  border-width: 7px;
+  margin-left: -7px;
+}
+p.copy-alert:before {
+  border-color: rgba(240, 87, 62, 0);
+  border-bottom-color: #F0573E;
+  border-width: 8px;
+  margin-left: -8px;
 }
 
 .click-arrow {
@@ -868,6 +893,10 @@ body.print {
   }
 
   #form-illo {
+    display: none;
+  }
+
+  #down-arrow-wayfinder, #up-arrow-wayfinder {
     display: none;
   }
 
