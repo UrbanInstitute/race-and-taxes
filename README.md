@@ -1,4 +1,4 @@
 # race-and-taxes
-TPC outlines racial disparities in the US tax system with a line by line examination of the 1040
+A line by line examination of the 1040 tax form and race
 
 Clone the repo and run `npm install`, then `npm run start` to start on localhost
