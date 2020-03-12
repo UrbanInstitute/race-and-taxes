@@ -51,7 +51,8 @@ workflows:
   aws-s3:
     jobs:
       - build
-      - deploy-stg:
+      - deploy-stg:        
+          context: Apps S3
           requires:
             - build
           filters:
@@ -60,6 +61,7 @@ workflows:
                 - staging
   
       - deploy-live:
+          context: Apps S3
           requires:
             - build
           filters:
