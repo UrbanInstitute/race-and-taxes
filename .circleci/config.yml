@@ -1,0 +1,68 @@
+# @see https://circleci.com/orbs/registry/orb/circleci/aws-s3
+
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.15
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run:
+          name: Install and Build
+          command: |
+            npm install
+            npm run build
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist
+            - dist/Fonts
+            - dist/img
+            - dist/scripts
+            - dist/styles
+
+  deploy-stg:
+    docker:
+      - image: 'cimg/python:3.6'
+    steps:
+      - attach_workspace:
+          at: .
+      - aws-s3/sync:
+          from: dist
+          overwrite: true
+          to: 's3://apps-stg.taxpolicycenter.org/features/race-and-taxes'
+
+  deploy-live:  
+    docker:
+      - image: 'cimg/python:3.6'
+    steps:
+      - attach_workspace:
+          at: .
+      - aws-s3/sync:
+          from: dist
+          overwrite: true
+          to: 's3://apps.taxpolicycenter.org/features/race-and-taxes'
+
+workflows:
+  version: 2
+  aws-s3:
+    jobs:
+      - build
+      - deploy-stg:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - staging
+  
+      - deploy-live:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master

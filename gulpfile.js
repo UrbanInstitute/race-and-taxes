@@ -110,14 +110,15 @@ function html() {
 }
 
 function images() {
-  return src('app/images/**/*', { since: lastRun(images) })
+  return src('app/img/**/*', { since: lastRun(images) })
     .pipe($.imagemin())
-    .pipe(dest('dist/images'));
+    .pipe(dest('dist/img'));
 };
 
 function fonts() {
-  return src('app/fonts/**/*.{eot,svg,ttf,woff,woff2}')
-    .pipe($.if(!isProd, dest('.tmp/fonts'), dest('dist/fonts')));
+  return src('app/Fonts/**/*.{eot,svg,ttf,woff,woff2}')
+    .pipe($.if(!isProd, dest('.tmp/Fonts')))
+    .pipe(dest('dist/Fonts'));
 };
 
 function extras() {
@@ -165,13 +166,13 @@ function startAppServer() {
   watch([
     'app/*.html',
     'app/images/**/*',
-    '.tmp/fonts/**/*'
+    '.tmp/Fonts/**/*'
   ]).on('change', server.reload);
 
   watch('app/styles/**/*.scss', styles);
   watch('app/scripts/**/*.js', scripts);
   watch('modernizr.json', modernizr);
-  watch('app/fonts/**/*', fonts);
+  watch('app/Fonts/**/*', fonts);
 }
 
 function startTestServer() {
